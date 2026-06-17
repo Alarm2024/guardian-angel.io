@@ -7,12 +7,12 @@ import {RashidAward} from "../Contracts/guardian-angel.io.sol";
 contract RashidAwardTest is Test {   
     RashidAward public awardContract;
  
-// Standardized cryptographic test actor
-    address public owner = address(0xA);
-    address public guardian = address(0xB);
-    address public verifier = address(0xC);
-    address public offsetRecipient = address(0xD);
-    address public recipient = address(0xE);
+    // Standardized cryptographic test actors using secure derivations to prevent precompile collisions
+    address public owner = makeAddr("owner");
+    address public guardian = makeAddr("guardian");
+    address public verifier = makeAddr("verifier");
+    address public offsetRecipient = makeAddr("offsetRecipient");
+    address public recipient = makeAddr("recipient");
 
     uint256 public initialOffsetBps = 500; // 5%
 
