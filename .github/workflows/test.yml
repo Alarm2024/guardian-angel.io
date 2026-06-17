@@ -1,0 +1,33 @@
+# ==============================================================================
+# GUARDIAN ANGEL PROTOCOL - CONTINUOUS INTEGRATION & SECURITY SUITE
+# ==============================================================================
+
+name: Protocol Verification CI
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-suite:
+    name: Execution of Automated Smart Contract Audit & Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry Toolchain Infrastructure
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Verify Contract Smart Compilation & Size Checks
+        run: forge build --sizes
+
+      - name: Run Institutional Test Vectors & Gas Analysis
+        run: forge test -vvv --gas-report
