@@ -26,6 +26,11 @@ jobs:
         with:
           version: nightly
 
+      - name: Install Dependencies & Resolve Paths
+        run: |
+          forge install
+          forge remappings > remappings.txt
+
       - name: Verify Contract Smart Compilation & Size Checks
         run: forge build --sizes
 
