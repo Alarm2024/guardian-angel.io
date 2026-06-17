@@ -25,8 +25,11 @@ jobs:
       - name: Install Dependencies
         run: forge install
 
-      - name: Verify Contract Smart Compilation & Size Checks
+      - name: Generate Remappings
+        run: forge remappings > remappings.txt
+
+      - name: Verify Contract Smart Compilation
         run: forge build --sizes
 
-      - name: Run Institutional Test Vectors & Gas Analysis
+      - name: Run Institutional Test Vectors
         run: forge test -vvv --gas-report
