@@ -1,7 +1,3 @@
-# ==============================================================================
-# GUARDIAN ANGEL PROTOCOL - CONTINUOUS INTEGRATION & SECURITY SUITE
-# ==============================================================================
-
 name: Protocol Verification CI
 
 on:
@@ -26,10 +22,8 @@ jobs:
         with:
           version: nightly
 
-      - name: Install Dependencies & Resolve Paths
-        run: |
-          forge install
-          forge remappings > remappings.txt
+      - name: Install Dependencies
+        run: forge install
 
       - name: Verify Contract Smart Compilation & Size Checks
         run: forge build --sizes
