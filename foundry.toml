@@ -2,4 +2,3 @@
 src = 'Contracts'
 out = 'out'
 libs = ['lib']
-test = 'test'
