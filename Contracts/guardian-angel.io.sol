@@ -97,7 +97,6 @@ contract RashidAward {
     // --- Ownership ---
     event OwnershipTransferStarted(address indexed previousOwner, address indexed newOwner);
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-    even GuardianRotationInitiated(address indexed previousGuardian, address indexed newGuardian, uint256 unlockTime);
     event GuardianRotationInitiated(address indexed previousGuardian, address indexed newGuardian, uint256 unlockTime);
     event GuardianRotated(address indexed previous, address indexed newGuardian);
     event GuardianRotationCancelled(address indexed cancelledBy);
