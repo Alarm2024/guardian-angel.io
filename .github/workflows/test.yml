@@ -1,23 +1,32 @@
 name: Protocol Verification CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master ]
 
 jobs:
-  test:
+  test-suite:
+    name: Execution of Automated Smart Contract Audit & Tests
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Install Foundry
+      - name: Install Foundry Toolchain Infrastructure
         uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
 
       - name: Install Dependencies
         run: forge install
 
-      - name: Create Remappings
-        run: forge remappings > remappings.txt
+      - name: Verify Contract Smart Compilation
+        run: forge build --sizes
 
-      - name: Run tests
-        run: forge test -vvv
+      - name: Run Institutional Test Vectors
+        run: forge test -vvv --gas-report
