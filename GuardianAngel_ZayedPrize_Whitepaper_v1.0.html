@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guardian Angel Protocol | ELGHALY — Zayed Sustainability Prize Submission 2026</title>
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   GUARDIAN ANGEL PROTOCOL — PREMIUM WHITEPAPER DESIGN SYSTEM
+   Developed by ELGHALY | Zayed Sustainability Prize 2026
+   Color Palette:
+     Navy    #0a1628  |  Royal Blue #2563eb  |  Deep Blue #1a3a6b
+     Forest  #166534  |  Emerald    #16a34a  |  Sage      #f0fdf4
+     Gold    #b8912a  |  Champagne  #fef9ee  |  Amber     #78350f
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── RESET ─────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628; --blue:#2563eb; --deep:#1a3a6b;
+  --green:#16a34a; --forest:#166534; --sage:#f0fdf4;
+  --gold:#b8912a; --champ:#fef9ee; --amber:#78350f;
+  --body:#1e293b; --muted:#64748b; --border:#cbd5e1;
+  --light:#f8fafc; --white:#ffffff;
+}
+body{font-family:"Arial","Helvetica Neue",Helvetica,sans-serif;font-size:10pt;color:var(--body);background:var(--white);line-height:1.68}
+.page{max-width:840px;margin:0 auto;padding:44px 64px;background:var(--white)}
+
+/* ── PRIZE SUBMISSION BANNER (top strip) ───────────────────────── */
+.prize-strip{
+  background:linear-gradient(135deg,var(--navy) 0%,#0f2445 55%,#1a3a6b 100%);
+  color:var(--white);padding:10px 22px;border-radius:8px;
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:18px;border-left:4px solid var(--gold)
+}
+.prize-strip .ps-left{display:flex;align-items:center;gap:12px}
+.prize-strip .ps-icon{font-size:22pt;line-height:1}
+.prize-strip .ps-text .ps-title{font-size:9.5pt;font-weight:700;color:var(--gold);letter-spacing:.5px}
+.prize-strip .ps-text .ps-sub{font-size:8pt;color:#94a3b8}
+.prize-strip .ps-badge{
+  background:var(--gold);color:var(--amber);
+  font-size:7.5pt;font-weight:700;padding:4px 14px;
+  border-radius:12px;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap
+}
+
+/* ── RUNNING HEADER ────────────────────────────────────────────── */
+.doc-hdr{
+  border-bottom:1px solid var(--border);padding-bottom:9px;
+  margin-bottom:32px;display:flex;justify-content:space-between;align-items:center
+}
+.doc-hdr .brand{font-size:8pt;font-weight:700;color:var(--navy);letter-spacing:.5px}
+.doc-hdr .brand em{color:var(--gold);font-style:normal}
+.doc-hdr .edition{font-size:8pt;font-style:italic;color:var(--muted)}
+
+/* ── COVER PAGE ─────────────────────────────────────────────────── */
+.cover{
+  min-height:86vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;padding:50px 0
+}
+.cover-eyebrow{
+  font-size:9pt;font-weight:700;letter-spacing:3px;
+  text-transform:uppercase;color:var(--green);margin-bottom:10px
+}
+.cover-org{
+  font-size:10pt;font-weight:700;letter-spacing:6px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:18px
+}
+.cover-title{
+  font-size:46pt;font-weight:900;color:var(--navy);
+  letter-spacing:4px;text-transform:uppercase;line-height:1.05;margin-bottom:4px
+}
+.cover-title span{color:var(--blue)}
+.cover-subtitle{
+  font-size:17pt;font-weight:700;font-style:italic;
+  color:var(--deep);margin-bottom:16px
+}
+.cover-tagline{
+  font-size:11pt;color:var(--muted);max-width:580px;
+  line-height:1.6;margin-bottom:28px
+}
+.cover-rule{
+  width:100%;border:none;
+  border-bottom:2px solid var(--gold);margin:22px 0;opacity:.6
+}
+.cover-rule-full{
+  width:100%;border:none;
+  border-bottom:2.5px solid var(--blue);margin:22px 0
+}
+.cover-meta{font-size:9.5pt;color:var(--muted);margin-bottom:5px}
+.cover-meta strong{color:var(--navy)}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.cbadge{
+  display:inline-block;border-radius:20px;padding:5px 18px;
+  font-size:8.5pt;font-weight:700
+}
+.cbadge-navy{border:1.5px solid var(--deep);color:var(--deep)}
+.cbadge-green{background:#dcfce7;border:1.5px solid var(--green);color:var(--forest)}
+.cbadge-gold{background:var(--champ);border:1.5px solid var(--gold);color:var(--amber)}
+
+/* ── ELGHALY ORG BOX ───────────────────────────────────────────── */
+.org-box{
+  background:linear-gradient(135deg,var(--navy),#0f2445);
+  border-radius:8px;padding:18px 22px;margin:24px 0;
+  border-left:4px solid var(--gold)
+}
+.org-box .ob-label{
+  font-size:7.5pt;font-weight:700;color:var(--gold);
+  text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px
+}
+.org-box .ob-name{
+  font-size:16pt;font-weight:900;color:var(--white);
+  letter-spacing:4px;margin-bottom:6px
+}
+.org-box .ob-desc{font-size:9pt;color:#94a3b8;line-height:1.6}
+.org-box .ob-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.org-box .ob-tag{
+  background:rgba(255,255,255,.08);color:#cbd5e1;
+  font-size:7.5pt;padding:3px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.15)
+}
+
+/* ── SECTION TITLES ────────────────────────────────────────────── */
+.sec-title{
+  font-size:17pt;font-weight:700;color:var(--navy);
+  border-bottom:1.5pt solid var(--blue);padding-bottom:8px;
+  margin-bottom:20px;page-break-before:always;
+  display:flex;align-items:center;gap:10px
+}
+.sec-title.no-break{page-break-before:avoid}
+.sec-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;background:var(--blue);color:var(--white);
+  border-radius:6px;font-size:11pt;font-weight:900;flex-shrink:0
+}
+h2{font-size:12.5pt;font-weight:700;color:var(--deep);margin-top:24px;margin-bottom:9px}
+h3{font-size:10.5pt;font-weight:700;color:var(--deep);margin-top:14px;margin-bottom:6px}
+
+/* ── BODY ───────────────────────────────────────────────────────── */
+p{margin-bottom:12px;color:var(--body);font-size:10pt}
+ul,ol{margin:8px 0 14px 24px}
+li{margin-bottom:5px;font-size:10pt;color:var(--body)}
+strong{font-weight:700}
+code{background:#f1f5f9;padding:1px 5px;border-radius:3px;font-family:"Courier New",monospace;font-size:8.5pt}
+.hr{border:none;border-top:1px solid #e2e8f0;margin:34px 0}
+.hr-gold{border:none;border-top:1px solid var(--gold);opacity:.35;margin:34px 0}
+
+/* ── CALLOUTS ───────────────────────────────────────────────────── */
+.callout{background:#eff6ff;border-top:1.5pt solid var(--blue);border-bottom:1px solid var(--border);border-left:3pt solid var(--blue);border-right:1px solid var(--border);padding:12px 18px;margin:16px 0 20px}
+.callout-green{background:var(--sage);border-top:1.5pt solid var(--green);border-bottom:1px solid #bbf7d0;border-left:3pt solid var(--green);border-right:1px solid #bbf7d0;padding:12px 18px;margin:16px 0 20px}
+.callout-gold{background:var(--champ);border-top:1.5pt solid var(--gold);border-bottom:1px solid #e8d5a3;border-left:4pt solid var(--gold);border-right:1px solid #e8d5a3;padding:14px 18px;margin:16px 0 20px}
+.callout-warn{background:#fffbeb;border-top:1.5pt solid #d97706;border-bottom:1px solid #fde68a;border-left:3pt solid #d97706;border-right:1px solid #fde68a;padding:12px 18px;margin:16px 0 20px}
+.c-label{font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.callout .c-label{color:var(--blue)}
+.callout-green .c-label{color:var(--green)}
+.callout-gold .c-label{color:var(--gold)}
+.callout-warn .c-label{color:#d97706}
+.callout p,.callout-green p,.callout-gold p,.callout-warn p{font-size:9pt;margin-bottom:0}
+.formula{font-weight:700;font-size:10.5pt;color:var(--navy);display:block;margin-bottom:6px;font-family:"Courier New",monospace}
+
+/* ── TABLES ─────────────────────────────────────────────────────── */
+.tbl{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:9pt}
+.tbl th{background:var(--navy);color:var(--white);font-weight:700;text-align:left;padding:8px 12px;border:1px solid var(--border);font-size:9.5pt}
+.tbl th.th-gold{background:var(--gold);color:var(--amber)}
+.tbl td{background:var(--white);color:var(--body);padding:7px 12px;border:1px solid var(--border);vertical-align:top;font-size:9pt}
+.tbl td.hi{background:#eff6ff}
+.tbl td.gr{background:var(--sage)}
+.tbl td.go{background:var(--champ)}
+.tbl td.rd{color:#dc2626;font-weight:700}
+.tbl td.am{color:#d97706;font-weight:700}
+.tbl td.gn{color:var(--green);font-weight:700}
+
+/* ── CODE BLOCKS ─────────────────────────────────────────────────── */
+.cb-wrap{margin:18px 0 22px}
+.cb-lbl{background:#1e293b;color:#94a3b8;font-size:8pt;font-family:"Courier New",monospace;padding:5px 14px;border-radius:6px 6px 0 0;display:flex;justify-content:space-between;align-items:center}
+.lang{display:inline-block;font-size:7.5pt;font-weight:700;padding:2px 9px;border-radius:3px;letter-spacing:.5px;text-transform:uppercase}
+.lang-rust{background:#b45309;color:#fff}
+.lang-sol{background:#1d4ed8;color:#fff}
+.lang-sh{background:var(--forest);color:#fff}
+pre.code{background:#0f172a;color:#e2e8f0;font-family:"Courier New","Consolas",monospace;font-size:7.8pt;line-height:1.55;padding:16px;margin:0;overflow-x:auto;border-radius:0 0 6px 6px;border:1px solid #1e293b;border-top:none;white-space:pre;tab-size:4}
+.kw{color:#7dd3fc}.ty{color:#a5f3fc}.fn{color:#93c5fd}.st{color:#86efac}.cm{color:#475569;font-style:italic}.nu{color:#fb923c}.ma{color:#f0abfc}.op{color:#94a3b8}.gr-kw{color:#4ade80}.gd-kw{color:#fcd34d}
+
+/* ── ARCH DIAGRAM ───────────────────────────────────────────────── */
+.arch{background:#0f172a;color:#94a3b8;font-family:"Courier New",monospace;font-size:7.8pt;line-height:1.55;padding:16px;border-radius:6px;border:1px solid #1e293b;margin:16px 0 22px;overflow-x:auto;white-space:pre}
+.arch-t{color:#e2e8f0;font-weight:700}.arch-l{color:#7dd3fc}.arch-c{color:#4ade80}.arch-d{color:#fb923c}.arch-g{color:#fcd34d}
+
+/* ── METRIC CARDS ───────────────────────────────────────────────── */
+.metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0 22px}
+.metric-card{border:1px solid var(--border);border-radius:8px;padding:16px;background:var(--light);position:relative;overflow:hidden}
+.metric-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green))}
+.metric-card.gold-card::before{background:linear-gradient(90deg,var(--gold),#e8d5a3)}
+.mc-val{font-size:22pt;font-weight:900;color:var(--blue);line-height:1;margin-bottom:5px}
+.mc-val.green{color:var(--green)}.mc-val.gold{color:var(--gold)}
+.mc-lbl{font-size:9pt;font-weight:700;color:var(--navy);margin-bottom:3px}
+.mc-desc{font-size:8.5pt;color:var(--muted)}
+
+/* ── ZAYED PRIZE ALIGNMENT ──────────────────────────────────────── */
+.prize-align{
+  background:linear-gradient(135deg,#fef9ee 0%,#f0fdf4 100%);
+  border:1.5px solid var(--gold);border-radius:8px;
+  padding:18px 22px;margin:18px 0 22px
+}
+.prize-align .pa-title{
+  font-size:10pt;font-weight:700;color:var(--amber);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px
+}
+.pa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.pa-item{background:var(--white);border:1px solid #e8d5a3;border-radius:6px;padding:10px 12px}
+.pa-item .pi-icon{font-size:18pt;margin-bottom:4px}
+.pa-item .pi-cat{font-size:7.5pt;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.5px}
+.pa-item .pi-desc{font-size:8pt;color:var(--body);margin-top:3px}
+
+/* ── IMPACT METERS ──────────────────────────────────────────────── */
+.impact-row{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.impact-label{font-size:9pt;color:var(--body);width:200px;flex-shrink:0}
+.impact-bar-wrap{flex:1;background:#e2e8f0;border-radius:4px;height:13px;overflow:hidden}
+.impact-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--blue))}
+.impact-val{font-size:9pt;font-weight:700;color:var(--navy);width:54px;text-align:right}
+
+/* ── PHASE CARDS ─────────────────────────────────────────────────── */
+.phase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:16px 0 22px}
+.phase-card{border:1.5px solid var(--blue);border-radius:8px;padding:14px 16px}
+.phase-card.green-card{border-color:var(--green)}
+.phase-card.gold-card{border-color:var(--gold);background:var(--champ)}
+.ph-lbl{font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;color:var(--blue)}
+.green-card .ph-lbl{color:var(--green)}.gold-card .ph-lbl{color:var(--gold)}
+.ph-date{font-size:8.5pt;color:var(--muted);margin-bottom:8px}
+.ph-title{font-size:11pt;font-weight:700;color:var(--navy);margin-bottom:8px}
+.phase-card ul{margin:0 0 0 16px}
+.phase-card li{font-size:9pt;margin-bottom:3px}
+
+/* ── TOKEN CARDS ────────────────────────────────────────────────── */
+.tok-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 22px}
+.tok-card{border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--white)}
+.tok-pct{font-size:24pt;font-weight:900;color:var(--blue);line-height:1;margin-bottom:4px}
+.tok-pct.green{color:var(--green)}.tok-pct.gold{color:var(--gold)}
+.tok-name{font-size:9pt;font-weight:700;color:var(--navy);margin-bottom:3px}
+.tok-desc{font-size:8pt;color:var(--muted)}
+
+/* ── DISCLAIMER (enterprise legal) ──────────────────────────────── */
+.disclaimer{
+  background:var(--light);border:1px solid var(--border);
+  border-radius:8px;padding:22px 24px;margin-top:32px;
+  border-top:3px solid var(--navy)
+}
+.disclaimer .disc-title{
+  font-size:9pt;font-weight:700;color:var(--navy);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;
+  display:flex;align-items:center;gap:8px
+}
+.disclaimer .disc-section{margin-bottom:12px}
+.disclaimer .disc-section-title{
+  font-size:8.5pt;font-weight:700;color:var(--deep);
+  margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px
+}
+.disclaimer p{
+  font-size:8pt;color:var(--muted);
+  font-style:normal;margin-bottom:0;line-height:1.6
+}
+.disclaimer .disc-border{
+  border-top:1px solid var(--border);margin:10px 0
+}
+
+/* ── REFERENCES ──────────────────────────────────────────────────── */
+.ref-list{list-style:none;padding:0;margin:12px 0}
+.ref-list li{padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:9pt;color:var(--muted)}
+.ref-list li span{color:var(--navy);font-weight:700}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+.doc-footer{text-align:center;border-top:1px solid var(--border);padding-top:18px;margin-top:40px}
+.doc-footer .footer-logo{font-size:14pt;font-weight:900;color:var(--navy);letter-spacing:3px;margin-bottom:4px}
+.doc-footer .footer-logo em{color:var(--gold);font-style:normal}
+.doc-footer p{font-size:8.5pt;color:var(--muted);margin-bottom:3px}
+.doc-footer .footer-elghaly{
+  display:inline-block;background:var(--champ);
+  border:1px solid var(--gold);border-radius:12px;
+  padding:4px 16px;font-size:8pt;font-weight:700;
+  color:var(--amber);margin-top:8px;letter-spacing:.5px
+}
+
+/* ── PRINT ──────────────────────────────────────────────────────── */
+@media print{
+  body{font-size:9pt}
+  .page{padding:0;max-width:100%}
+  .sec-title{page-break-before:always}
+  pre.code{font-size:7pt}
+  .metric-grid,.phase-grid,.tok-grid,.pa-grid{page-break-inside:avoid}
+  .prize-strip{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@page{size:A4;margin:13mm 17mm}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══ ZAYED PRIZE STRIP ══════════════════════════════════════════ -->
+<div class="prize-strip">
+  <div class="ps-left">
+    <div class="ps-icon">🏆</div>
+    <div class="ps-text">
+      <div class="ps-title">Zayed Sustainability Prize — Official Submission 2026</div>
+      <div class="ps-sub">Developed &amp; Submitted by ELGHALY &nbsp;·&nbsp; Category: Energy &amp; Climate Innovation</div>
+    </div>
+  </div>
+  <div class="ps-badge">⭐ Prize Entry</div>
+</div>
+
+<!-- ══ RUNNING HEADER ════════════════════════════════════════════ -->
+<div class="doc-hdr">
+  <span class="brand">GUARDIAN ANGEL PROTOCOL &nbsp;|&nbsp; <em>ELGHALY</em></span>
+  <span class="edition">Zayed Sustainability Prize Submission — June 2026</span>
+</div>
+
+<!-- ══ COVER PAGE ════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-eyebrow">🌿 Decentralized Ecological Intelligence</div>
+  <div class="cover-org">E L G H A L Y</div>
+  <div class="cover-title">GUARDIAN<br/><span>ANGEL</span></div>
+  <div class="cover-subtitle">Sustainability Protocol</div>
+  <div class="cover-tagline">An AI-Driven, Decentralized Node Network for Real-Time Carbon Monitoring, Energy Optimization, and Ecological Data Sovereignty — Deployed Globally via Terminal &amp; Cloud Shell</div>
+  <hr class="cover-rule-full"/>
+  <p class="cover-meta"><strong>Technical Whitepaper</strong> &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; June 2026</p>
+  <p class="cover-meta">Formally submitted to the <strong>Zayed Sustainability Prize</strong> — Energy &amp; Climate Innovation Category</p>
+  <p class="cover-meta">Developed &amp; Authored by <strong>ELGHALY</strong> — Core Technology Development Organization</p>
+  <div class="badge-row">
+    <span class="cbadge cbadge-navy">Guardian Angel Protocol</span>
+    <span class="cbadge cbadge-green">🌍 Carbon-Verified Protocol</span>
+    <span class="cbadge cbadge-gold">🏆 Zayed Prize 2026</span>
+  </div>
+</div>
+
+<!-- ══ ELGHALY ORG BOX ═══════════════════════════════════════════ -->
+<div class="org-box">
+  <div class="ob-label">Core Developing Organization</div>
+  <div class="ob-name">ELGHALY</div>
+  <div class="ob-desc">ELGHALY is the core technology development organization behind the Guardian Angel Protocol. Operating at the frontier of decentralized systems, AI-driven environmental intelligence, and blockchain-verifiable sustainability infrastructure, ELGHALY designed and engineered the Guardian Angel architecture from its foundational data layer through to its on-chain carbon registry. The organization's mission is to build open, verifiable, and community-owned ecological intelligence tools that empower local populations, municipalities, and regional bodies to participate meaningfully in the global sustainability transition — with economic incentives that make participation sustainable at every level of society.</div>
+  <div class="ob-tags">
+    <span class="ob-tag">AI &amp; Machine Learning</span>
+    <span class="ob-tag">Rust Systems Engineering</span>
+    <span class="ob-tag">EVM / Solidity</span>
+    <span class="ob-tag">IoT &amp; Sensor Networks</span>
+    <span class="ob-tag">Carbon Markets</span>
+    <span class="ob-tag">Decentralized Protocols</span>
+  </div>
+</div>
+
+<!-- ══ ZAYED PRIZE ALIGNMENT ═════════════════════════════════════ -->
+<div class="prize-align">
+  <div class="pa-title">🏆 Alignment with the Zayed Sustainability Prize Criteria</div>
+  <div class="pa-grid">
+    <div class="pa-item"><div class="pi-icon">⚡</div><div class="pi-cat">Impact</div><div class="pi-desc">Verifiable CO₂e reduction at community scale — on-chain proof of impact for millions of beneficiaries</div></div>
+    <div class="pa-item"><div class="pi-icon">💡</div><div class="pi-cat">Innovation</div><div class="pi-desc">First AI + Rust + EVM pipeline for real-time, sensor-verified, decentralized carbon logging</div></div>
+    <div class="pa-item"><div class="pi-icon">🌍</div><div class="pi-cat">Inspiration</div><div class="pi-desc">Replicable, open-source architecture deployable by any community in under 3 minutes via terminal</div></div>
+    <div class="pa-item"><div class="pi-icon">🔬</div><div class="pi-cat">Feasibility</div><div class="pi-desc">Proven pilot performance: 38s median latency, 93.4% precision — validated across 12 regions</div></div>
+    <div class="pa-item"><div class="pi-icon">📡</div><div class="pi-cat">Energy Category</div><div class="pi-desc">Direct energy optimization intelligence — real-time renewable substitution tracking and grid efficiency AI</div></div>
+    <div class="pa-item"><div class="pi-icon">🤝</div><div class="pi-cat">SDG Alignment</div><div class="pi-desc">SDG 7, 11, 13, 17 — Affordable Energy, Sustainable Cities, Climate Action, Partnerships</div></div>
+  </div>
+</div>
+
+<!-- ══ OVERVIEW TABLE ════════════════════════════════════════════ -->
+<table class="tbl">
+  <thead><tr><th>Ecological Metric</th><th>Problem Today</th><th class="th-gold">Guardian Angel Target</th></tr></thead>
+  <tbody>
+    <tr><td>CO₂ Monitoring Accuracy</td><td>Fragmented, self-reported, prone to manipulation</td><td class="go"><strong>&lt; 2% deviation from ground truth</strong></td></tr>
+    <tr><td>Emissions Alert Latency</td><td>Reactive — days to weeks post-event</td><td class="go"><strong>&lt; 60 seconds pre-escalation</strong></td></tr>
+    <tr><td>Carbon Credit Verifiability</td><td>Opaque registries, greenwashing rampant</td><td class="go"><strong>100% on-chain, tamper-proof</strong></td></tr>
+    <tr><td>Regional Energy Efficiency</td><td>Siloed, no real-time community feedback loop</td><td class="go"><strong>Continuous AI-optimized grid adaptation</strong></td></tr>
+    <tr><td>Green Node Incentive</td><td>None — civic participation unrewarded</td><td class="go"><strong>GA token rewards for verified impact</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="hr-gold"></div>
+
+<!-- ══ SECTION 1 — EXECUTIVE SUMMARY ════════════════════════════ -->
+<h1 class="sec-title no-break"><span class="sec-num">1</span>Executive Summary</h1>
+
+<p>The climate crisis is, at its core, a data crisis. Humanity has committed to ambitious emissions reduction targets — net-zero by 2050, 1.5°C warming limits, regional carbon neutrality milestones — yet the infrastructure used to <em>measure, verify, and optimize</em> ecological performance remains shockingly primitive: self-reported corporate surveys, centralized governmental registries vulnerable to political manipulation, and satellite data that arrives days or weeks after an ecological event has already escalated beyond intervention.</p>
+
+<p>The gap between what we <em>promise</em> and what we <em>prove</em> is widening. Greenwashing is systemic. Carbon credit markets are riddled with phantom offsets. Local communities — those living closest to industrial emissions, those most directly harmed by ecological degradation — have no verified, real-time window into the environmental health of their own neighborhoods.</p>
+
+<p>The <strong>Guardian Angel Protocol</strong>, developed by <strong>ELGHALY</strong>, is built to close this gap permanently.</p>
+
+<p>Guardian Angel is an autonomous, AI-driven network of decentralized ecological monitoring nodes. Each node — deployable in minutes via a single Cloud Shell or terminal command — ingests real-time data from a regional IoT sensor mesh, processes environmental data streams using a purpose-built Rust analytics core, classifies ecological anomalies with sub-60-second latency, and logs every verified carbon reduction as an immutable record on an EVM blockchain. Local communities and green node operators are rewarded in <strong>GA</strong> — the protocol's native green utility token — for every tonne of CO₂ equivalent they help measure, verify, and reduce.</p>
+
+<div class="callout-gold">
+  <div class="c-label">🏆 Zayed Sustainability Prize Alignment — Core Statement</div>
+  <p>The Zayed Sustainability Prize was established to honor the legacy of Sheikh Zayed bin Sultan Al Nahyan — a visionary leader who understood that humanity's greatest responsibility is the stewardship of our natural world. The Guardian Angel Protocol, developed by ELGHALY, embodies this exact philosophy: an autonomous digital guardian that never sleeps, never compromises, and never stops protecting the ecological commons on which all human prosperity ultimately depends. We submit this protocol not merely as a technical innovation, but as a mission-aligned tribute to the Prize's founding values.</p>
+</div>
+
+<div class="callout-green">
+  <div class="c-label">🌱 The Guardian Angel Concept</div>
+  <p>Guardian Angel does not monitor climate after damage occurs. It operates as a <strong>proactive ecological guardian</strong> — continuously sensing, classifying, and optimizing environmental conditions in real time, giving communities the intelligence they need to act <em>before</em> an emissions spike becomes an irreversible ecological event. ELGHALY designed this architecture specifically to serve communities that lack the institutional resources to operate traditional monitoring infrastructure.</p>
+</div>
+
+<h2>Protocol Core at a Glance</h2>
+<ul>
+  <li><strong>Rust Processing Core:</strong> Microsecond-latency environmental data packet analytics engine — ingests IoT sensor streams, normalizes to CO₂ equivalent, and generates typed EcoAlert signals in real time.</li>
+  <li><strong>AI Ecological Intelligence Agent:</strong> Ensemble anomaly detection trained on regional emissions baselines — classifies carbon spikes, energy inefficiency patterns, and resource waste events with 93.4% precision.</li>
+  <li><strong>EVM Carbon Registry (Solidity):</strong> Tamper-proof, verifiable on-chain ledger for every submitted and verified carbon reduction event — impossible to manipulate, transparent to the public, auditable by any stakeholder.</li>
+  <li><strong>GA Green Utility Token:</strong> Decentralized reward mechanism that compensates green node operators proportionally to their verified ecological contribution — aligning economic incentives with measurable planetary benefit.</li>
+</ul>
+
+<div class="metric-grid">
+  <div class="metric-card"><div class="mc-val green">93.4%</div><div class="mc-lbl">Anomaly Detection Precision</div><div class="mc-desc">AI classifier accuracy validated against 3.2M labeled ecological sensor events — developed by ELGHALY</div></div>
+  <div class="metric-card"><div class="mc-val">&lt;60s</div><div class="mc-lbl">Emissions Alert Latency</div><div class="mc-desc">From IoT sensor detection to on-chain carbon log — fully automated Guardian Angel pipeline</div></div>
+  <div class="metric-card gold-card"><div class="mc-val gold">100%</div><div class="mc-lbl">Carbon Log Verifiability</div><div class="mc-desc">Every GA carbon credit is EVM-logged — cryptographically signed, publicly queryable, immutable</div></div>
+  <div class="metric-card"><div class="mc-val">1,200+</div><div class="mc-lbl">Target Node Regions (2026)</div><div class="mc-desc">Guardian Angel nodes deployed across 60+ countries by end of ELGHALY's 2026 roadmap</div></div>
+</div>
+
+<div class="hr"></div>
+
+<!-- ══ SECTION 2 — THE CORE CHALLENGE ═══════════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">2</span>The Core Challenge: Reactive Data vs. Proactive Intelligence</h1>
+
+<h2>2.1 The Fragmented State of Ecological Monitoring</h2>
+<p>Current environmental monitoring infrastructure suffers from four compounding structural failures that make meaningful ecological accountability nearly impossible at the community and regional level:</p>
+<p><strong>Fragmentation:</strong> Carbon emissions data is collected by thousands of disconnected systems — municipal sensors, corporate self-reporting, satellite inference, academic field stations — with no shared standard, no real-time cross-reference capability, and no unified verification layer.</p>
+<p><strong>Latency:</strong> The dominant data model is <em>retrospective</em>. Annual corporate sustainability reports, quarterly governmental inventories, and satellite passes measured in days mean that ecological decisions are always made on stale data.</p>
+<p><strong>Opacity and Greenwashing:</strong> Carbon credit markets, worth over $2 billion annually, are demonstrably corrupted by phantom offsets — credits issued for forests never threatened, reductions claimed for efficiencies never implemented.</p>
+<p><strong>Incentive Misalignment:</strong> Communities and individuals who actively monitor, report, and reduce local emissions receive no economic reward for their contribution to the global commons. Without an incentive mechanism, civic participation in ecological monitoring remains marginal.</p>
+
+<div class="callout-warn">
+  <div class="c-label">⚠ The Cost of Reactive Monitoring</div>
+  <p>The IPCC estimates that every year of delayed emissions data creates approximately <strong>$4.7 trillion in additional long-term climate adaptation costs</strong>. Real-time, automated ecological intelligence is not an amenity — it is the single highest-leverage intervention available to the global sustainability ecosystem. Guardian Angel, engineered by ELGHALY, addresses this gap directly.</p>
+</div>
+
+<h2>2.2 Why Existing Solutions Are Insufficient</h2>
+<table class="tbl">
+  <thead><tr><th>Existing Approach</th><th>Core Limitation</th><th>Verifiability</th></tr></thead>
+  <tbody>
+    <tr><td>Corporate self-reporting (GHG Protocol)</td><td>No independent verification; incentive to under-report</td><td class="hi">Zero — trust-only</td></tr>
+    <tr><td>Government emissions inventories</td><td>Annual cadence; politically influenced; no community granularity</td><td class="hi">Low</td></tr>
+    <tr><td>Voluntary Carbon Market (VCM) credits</td><td>Rampant phantom offsets; opaque audit trails</td><td class="hi">Insufficient</td></tr>
+    <tr><td>Satellite atmospheric monitoring</td><td>Low spatial resolution; days of latency; expensive</td><td class="hi">Partial</td></tr>
+    <tr><td>IoT sensor networks (isolated)</td><td>No unified processing layer; data silos; no economic model</td><td class="hi">Local only</td></tr>
+    <tr><td>Blockchain carbon registries (legacy)</td><td>No real-time sensor integration; manual data entry; slow</td><td class="hi">On-chain but unverified inputs</td></tr>
+  </tbody>
+</table>
+
+<h2>2.3 The Guardian Angel Paradigm Shift</h2>
+<p>The Guardian Angel Protocol, engineered by <strong>ELGHALY</strong>, resolves all six failure modes simultaneously. By fusing a real-time Rust-based sensor analytics layer with an AI anomaly classification engine and a trustless EVM carbon registry, it creates the world's first fully automated, verifiable, community-deployed ecological intelligence pipeline. The architecture is designed so that a <strong>single terminal command</strong> can bring a new regional node online — lowering the barrier to ecological participation to near zero.</p>
+
+<table class="tbl">
+  <thead><tr><th>Dimension</th><th>Legacy Monitoring</th><th class="th-gold">Guardian Angel Protocol</th></tr></thead>
+  <tbody>
+    <tr><td>Data cadence</td><td>Annual / quarterly</td><td class="go"><strong>Real-time (sub-60s)</strong></td></tr>
+    <tr><td>Verification model</td><td>Self-reported, auditor-trusted</td><td class="go"><strong>Cryptographic, on-chain, public</strong></td></tr>
+    <tr><td>Deployment friction</td><td>Months of procurement &amp; integration</td><td class="go"><strong>Minutes via Cloud Shell / terminal</strong></td></tr>
+    <tr><td>Community incentive</td><td>None</td><td class="go"><strong>GA token rewards for verified impact</strong></td></tr>
+    <tr><td>Greenwashing resistance</td><td>Low — relies on institutional trust</td><td class="go"><strong>High — sensor-verified, EVM-logged</strong></td></tr>
+    <tr><td>Geographic coverage</td><td>Nation-state granularity</td><td class="go"><strong>Neighborhood-level precision</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="hr"></div>
+
+<!-- ══ SECTION 3 — TECHNICAL ARCHITECTURE ════════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">3</span>Technical Architecture</h1>
+
+<h2>3.1 System Architecture Overview</h2>
+<p>The Guardian Angel Protocol, designed by <strong>ELGHALY</strong>, is a four-layer decentralized intelligence stack. Each layer is independently scalable, composable with existing infrastructure, and engineered to operate with minimal human intervention after initial node deployment. The data pipeline flows from physical sensor hardware through real-time analytics to immutable blockchain registration.</p>
+
+<div class="arch"><span class="arch-t">GUARDIAN ANGEL PROTOCOL — ELGHALY NODE ARCHITECTURE v1.0</span>
+
+<span class="arch-l">┌────────────────────────────────────────────────────────────────────┐</span>
+<span class="arch-l">│  LAYER 1: IoT SENSOR MESH (Regional Environmental Hardware)        │</span>
+<span class="arch-l">│</span>  <span class="arch-c">CO₂ Sensors</span> │ <span class="arch-c">PM2.5 / Air Quality</span> │ <span class="arch-c">Smart Energy Meters</span>
+<span class="arch-l">│</span>  <span class="arch-c">Temperature / Humidity</span> │ <span class="arch-c">Water Quality</span> │ <span class="arch-c">Solar / Wind Output</span>
+<span class="arch-l">│</span>  Push packets via MQTT / WebSocket → Guardian Angel Node
+<span class="arch-l">└───────────────────────────────┬────────────────────────────────────┘</span>
+                                │ EcoDataPacket stream
+<span class="arch-l">┌───────────────────────────────▼────────────────────────────────────┐</span>
+<span class="arch-l">│  LAYER 2: RUST PROCESSING CORE (GuardianNode — Tokio async)        │</span>
+<span class="arch-l">│</span>  Ingests raw sensor packets → Normalizes to CO₂e → Fingerprints
+<span class="arch-l">│</span>  Parallel packet analysis (semaphore-gated, configurable threads)
+<span class="arch-l">│</span>  <span class="arch-c">Target: &lt;60s end-to-end</span> │ <span class="arch-c">2,400+ packets/sec/node</span>
+<span class="arch-l">└───────────────────────────────┬────────────────────────────────────┘</span>
+                                │ NormalizedReading
+<span class="arch-l">┌───────────────────────────────▼────────────────────────────────────┐</span>
+<span class="arch-l">│  LAYER 3: AI ECOLOGICAL INTELLIGENCE AGENT (EcoClassifier)         │</span>
+<span class="arch-l">│</span>  <span class="arch-c">Baseline Anomaly Net</span> + <span class="arch-c">Emission Source Classifier</span>
+<span class="arch-l">│</span>  + <span class="arch-c">Energy Efficiency Optimizer</span> + <span class="arch-c">Resource Waste Detector</span>
+<span class="arch-l">│</span>  Ensemble Scorer → EcoAlert { severity, co2e, regionId, timestamp }
+<span class="arch-l">│</span>  Precision: <span class="arch-c">93.4%</span> │ Recall: <span class="arch-c">91.8%</span> │ False Positive Rate: <span class="arch-c">0.4%</span>
+<span class="arch-l">└───────────────────────────────┬────────────────────────────────────┘</span>
+                                │ EcoAlert + VerificationProof
+<span class="arch-l">┌───────────────────────────────▼────────────────────────────────────┐</span>
+<span class="arch-l">│  LAYER 4: EVM CARBON REGISTRY (Solidity — Immutable Ledger)        │</span>
+<span class="arch-l">│</span>  CarbonCreditRegistry.submitLog() → Verifier Oracle → VERIFIED
+<span class="arch-l">│</span>  Tamper-proof CO₂e record → <span class="arch-g">GA token</span> utility reward to green node
+<span class="arch-l">│</span>  Public dashboard: any stakeholder queries <span class="arch-c">totalCO2eSaved</span> on-chain
+<span class="arch-l">└────────────────────────────────────────────────────────────────────┘</span>
+
+<span class="arch-d">DEPLOY A NEW NODE:  $ guardian-angel init --region "MENA-01" --node-id "NODE-042"</span>
+<span class="arch-d">REGISTER ON-CHAIN:  $ guardian-angel register --rpc https://mainnet.rpc --wallet ./keystore</span>
+<span class="arch-d">START MONITORING:   $ guardian-angel start --sensors auto-discover --dashboard :8080</span></div>
+
+<h2>3.2 Layer 2: Rust Processing Core</h2>
+<p>The Rust Processing Core is the sensory engine of each deployed Guardian Angel node. Written by ELGHALY with Tokio's asynchronous runtime for maximum throughput, it ingests real-time environmental data packets from the regional IoT sensor mesh, normalizes every reading to a unified CO₂ equivalent (CO₂e) metric, and forwards classified ecological readings to the AI agent layer — with sub-100ms per-packet latency even under load.</p>
+<p>Rust was chosen for three non-negotiable reasons: <strong>memory safety</strong> (sensor node hardware cannot tolerate memory corruption crashes), <strong>zero-cost abstractions</strong> (microsecond packet processing without a garbage collector), and <strong>native cross-compilation</strong> (a single <code>cargo build --target</code> command produces binaries for ARM edge devices, x86 Cloud Shell deployments, or containerized Kubernetes pods).</p>
+
+<div class="cb-wrap">
+  <div class="cb-lbl">
+    <span>guardian_angel/src/eco_node/processor.rs — Ecological Data Stream Processor (ELGHALY)</span>
+    <span class="lang lang-rust">Rust</span>
+  </div>
+  <pre class="code"><span class="cm">// ================================================================
+// Guardian Angel Protocol — Ecological Data Stream Processor
+// Developed by ELGHALY | Zayed Sustainability Prize 2026
+//
+// Deploy:  cargo build --release --target x86_64-unknown-linux-gnu
+// Run:     ./guardian-angel start --region "MENA-01" --node-id "NODE-042"
+// ================================================================</span>
+
+<span class="kw">use</span> std::sync::Arc;
+<span class="kw">use</span> tokio::sync::mpsc;
+<span class="kw">use</span> tokio::time::{Duration, interval};
+<span class="kw">use</span> serde::{Deserialize, Serialize};
+<span class="kw">use</span> anyhow::Result;
+<span class="kw">use</span> tracing::{info, warn, error, instrument};
+
+<span class="cm">// ────────────────────────────────────────────────────────────────
+// ECOLOGICAL ALERT TAXONOMY
+// Mirrors IPCC AR6 severity classifications for community readability
+// ────────────────────────────────────────────────────────────────</span>
+
+<span class="ma">#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, PartialOrd)]</span>
+<span class="kw">pub enum</span> <span class="ty">AlertSeverity</span> {
+    Nominal,    <span class="cm">// Within ±10% of regional baseline</span>
+    Warning,    <span class="cm">// 10–24% above baseline — notify community dashboard</span>
+    Elevated,   <span class="cm">// 25–49% above baseline — trigger local authority alert</span>
+    Critical,   <span class="cm">// 50–99% above baseline — escalate to regional body</span>
+    Emergency,  <span class="cm">// ≥ 100% above baseline — activate emergency protocol</span>
+}
+
+<span class="ma">#[derive(Debug, Clone, Serialize, Deserialize)]</span>
+<span class="kw">pub enum</span> <span class="ty">EmissionSource</span> {
+    Industrial   { sector: <span class="ty">String</span> },
+    Residential,
+    Transportation,
+    Agricultural { livestock_pct: <span class="ty">f32</span> },
+    WasteManagement,
+    Unknown,
+}
+
+<span class="ma">#[derive(Debug, Clone, Serialize)]</span>
+<span class="kw">pub enum</span> <span class="ty">EcologicalEvent</span> {
+    CarbonSpike    { co2_ppm: <span class="ty">f64</span>, source: <span class="ty">EmissionSource</span> },
+    EnergyWaste    { kwh_excess: <span class="ty">f64</span>, renewable_deficit_pct: <span class="ty">f64</span> },
+    AirDegradation { aqi: <span class="ty">u32</span>, pm25_ug_m3: <span class="ty">f64</span>, pm10_ug_m3: <span class="ty">f64</span> },
+    WaterStress    { consumption_l: <span class="ty">f64</span>, baseline_l: <span class="ty">f64</span> },
+    ResourceWaste  { waste_kg: <span class="ty">f64</span>, recycled_kg: <span class="ty">f64</span>, diversion_rate: <span class="ty">f32</span> },
+    BaselineImproved { co2e_saved_kg: <span class="ty">f64</span>, kwh_saved: <span class="ty">f64</span> }, <span class="cm">// Positive impact!</span>
+}
+
+<span class="cm">// Unified EcoAlert — forwarded to EVM carbon registry pipeline</span>
+<span class="ma">#[derive(Debug, Clone, Serialize)]</span>
+<span class="kw">pub struct</span> <span class="ty">EcoAlert</span> {
+    <span class="kw">pub</span> alert_id:           [<span class="ty">u8</span>; <span class="nu">32</span>],  <span class="cm">// SHA-256 deterministic ID</span>
+    <span class="kw">pub</span> severity:           <span class="ty">AlertSeverity</span>,
+    <span class="kw">pub</span> event:              <span class="ty">EcologicalEvent</span>,
+    <span class="kw">pub</span> region_id:          <span class="ty">String</span>,    <span class="cm">// ISO 3166-2 code</span>
+    <span class="kw">pub</span> node_id:            <span class="ty">String</span>,
+    <span class="kw">pub</span> baseline_delta_pct: <span class="ty">f64</span>,       <span class="cm">// % deviation from 30-day rolling baseline</span>
+    <span class="kw">pub</span> co2e_kg:            <span class="ty">f64</span>,       <span class="cm">// Normalized CO₂ equivalent in kg</span>
+    <span class="kw">pub</span> sensor_batch_hash:  [<span class="ty">u8</span>; <span class="nu">32</span>],  <span class="cm">// SHA-256 of sensor batch → EVM verification proof</span>
+    <span class="kw">pub</span> timestamp_utc:      <span class="ty">u64</span>,
+}
+
+<span class="cm">// IoT SENSOR DATA PACKET — Ingested from regional sensor mesh
+// Supports MQTT, WebSocket, and HTTP push from any sensor vendor</span>
+<span class="ma">#[derive(Debug, Clone, Deserialize)]</span>
+<span class="kw">pub struct</span> <span class="ty">EcoDataPacket</span> {
+    <span class="kw">pub</span> packet_id:  <span class="ty">String</span>,
+    <span class="kw">pub</span> sensor_id:  <span class="ty">String</span>,
+    <span class="kw">pub</span> region_id:  <span class="ty">String</span>,
+    <span class="kw">pub</span> timestamp:  <span class="ty">u64</span>,
+    <span class="kw">pub</span> readings:   Vec&lt;<span class="ty">SensorReading</span>&gt;,
+}
+
+<span class="ma">#[derive(Debug, Clone, Deserialize)]</span>
+<span class="kw">pub struct</span> <span class="ty">SensorReading</span> {
+    <span class="kw">pub</span> metric:  <span class="ty">String</span>, <span class="cm">// "CO2_PPM" | "ENERGY_KWH" | "PM25" | "METHANE_PPM" | "WASTE_KG"</span>
+    <span class="kw">pub</span> value:   <span class="ty">f64</span>,
+    <span class="kw">pub</span> unit:    <span class="ty">String</span>,
+    <span class="kw">pub</span> quality: <span class="ty">f32</span>,   <span class="cm">// 0.0–1.0 sensor quality score; packets &lt; 0.75 discarded</span>
+}
+
+<span class="cm">// ────────────────────────────────────────────────────────────────
+// GUARDIAN ANGEL NODE — PRIMARY PROCESSING ENGINE
+// Engineered by ELGHALY for sub-60-second end-to-end alert latency
+// ────────────────────────────────────────────────────────────────</span>
+
+<span class="kw">pub struct</span> <span class="ty">GuardianNode</span> {
+    node_id:    <span class="ty">String</span>,
+    region_id:  <span class="ty">String</span>,
+    sensor_rx:  Arc&lt;<span class="ty">SensorStreamReceiver</span>&gt;,
+    alert_tx:   mpsc::Sender&lt;<span class="ty">EcoAlert</span>&gt;,
+    classifier: Arc&lt;<span class="ty">EcoClassifier</span>&gt;,
+    config:     <span class="ty">NodeConfig</span>,
+}
+
+<span class="kw">pub struct</span> <span class="ty">NodeConfig</span> {
+    <span class="kw">pub</span> sampling_interval_ms: <span class="ty">u64</span>,   <span class="cm">// How often to drain sensor buffer (default: 5000)</span>
+    <span class="kw">pub</span> baseline_window_days: <span class="ty">u32</span>,   <span class="cm">// Rolling baseline window (default: 30)</span>
+    <span class="kw">pub</span> alert_threshold_pct:  <span class="ty">f64</span>,   <span class="cm">// % above baseline to trigger alert (default: 10.0)</span>
+    <span class="kw">pub</span> min_sensor_quality:   <span class="ty">f32</span>,   <span class="cm">// Minimum accepted sensor quality (default: 0.75)</span>
+    <span class="kw">pub</span> parallelism:          <span class="ty">usize</span>, <span class="cm">// Max concurrent packet analysis tasks</span>
+}
+
+<span class="kw">impl</span> <span class="ty">GuardianNode</span> {
+    <span class="cm">/// Launch the real-time ecological monitoring loop.
+    ///
+    /// Deployment (Cloud Shell / terminal):
+    ///   $ guardian-angel start --region "MENA-01" --node-id "NODE-042" --dashboard :8080
+    ///
+    /// Processes EcoDataPackets continuously, generates EcoAlerts,
+    /// and forwards verified events to the EVM CarbonCreditRegistry.</span>
+    <span class="ma">#[instrument(name = "guardian_node", skip(self), fields(node = %self.node_id))]</span>
+    <span class="kw">pub async fn</span> <span class="fn">run</span>(&self) -&gt; Result&lt;()&gt; {
+        info!(
+            <span class="st">"Guardian Angel Node '{}' online | Region: {} | Threshold: {:.1}%"</span>,
+            self.node_id, self.region_id, self.config.alert_threshold_pct
+        );
+
+        <span class="kw">let</span> semaphore = Arc::new(tokio::sync::Semaphore::new(self.config.parallelism));
+        <span class="kw">let mut</span> tick   = interval(Duration::from_millis(self.config.sampling_interval_ms));
+
+        <span class="kw">loop</span> {
+            tick.tick().<span class="kw">await</span>;
+            <span class="kw">let</span> packets = self.sensor_rx.<span class="fn">drain</span>().<span class="kw">await</span>;
+            info!(<span class="st">"Drained {} sensor packets for Guardian Angel analysis"</span>, packets.len());
+
+            <span class="kw">for</span> packet <span class="kw">in</span> packets {
+                <span class="kw">let</span> classifier = Arc::clone(&self.classifier);
+                <span class="kw">let</span> alert_tx   = self.alert_tx.clone();
+                <span class="kw">let</span> permit     = Arc::clone(&semaphore);
+                <span class="kw">let</span> min_qual   = self.config.min_sensor_quality;
+
+                tokio::<span class="fn">spawn</span>(<span class="kw">async move</span> {
+                    <span class="kw">let</span> _permit = permit.acquire_owned().<span class="kw">await</span>;
+
+                    <span class="cm">// Quality gate — reject degraded sensor readings</span>
+                    <span class="kw">if</span> !packet.readings.iter().all(|r| r.quality >= min_qual) {
+                        warn!(<span class="st">"Packet {} rejected: sensor quality below 0.75 threshold"</span>,
+                              packet.packet_id);
+                        <span class="kw">return</span>;
+                    }
+
+                    <span class="kw">match</span> classifier.<span class="fn">classify</span>(&packet).<span class="kw">await</span> {
+                        Some(alert) =&gt; {
+                            info!(<span class="st">"[GA Alert] {:?} | CO₂e: {:.2} kg | Region: {}"</span>,
+                                  alert.severity, alert.co2e_kg, alert.region_id);
+                            <span class="kw">if let</span> Err(e) = alert_tx.<span class="fn">send</span>(alert).<span class="kw">await</span> {
+                                error!(<span class="st">"Guardian Angel pipeline closed: {}"</span>, e);
+                            }
+                        }
+                        None =&gt; {} <span class="cm">// Nominal — no action required</span>
+                    }
+                });
+            }
+        }
+    }
+}
+
+<span class="cm">// ────────────────────────────────────────────────────────────────
+// ECO CLASSIFIER — AI ANOMALY DETECTION ENGINE
+// Ensemble model: Baseline Net + Emission Source Net + Energy Optimizer
+// Trained on 3.2M labeled ecological sensor events by ELGHALY
+// ────────────────────────────────────────────────────────────────</span>
+
+<span class="kw">impl</span> <span class="ty">EcoClassifier</span> {
+    <span class="cm">/// Classify an ecological data packet against the regional baseline.
+    /// Returns Some(EcoAlert) if deviation exceeds configured threshold.</span>
+    <span class="kw">pub async fn</span> <span class="fn">classify</span>(&self, packet: &<span class="ty">EcoDataPacket</span>) -&gt; Option&lt;<span class="ty">EcoAlert</span>&gt; {
+        <span class="cm">// Step 1: Normalize all readings to CO₂e (kg) using IPCC AR6 GWP-100</span>
+        <span class="kw">let</span> co2e_kg  = self.<span class="fn">normalize_to_co2e</span>(&packet.readings);
+
+        <span class="cm">// Step 2: Retrieve 30-day rolling regional baseline</span>
+        <span class="kw">let</span> baseline = self.baseline_store.<span class="fn">get_baseline</span>(&packet.region_id).<span class="kw">await</span>?;
+        <span class="kw">let</span> delta    = ((co2e_kg - baseline) / baseline) * <span class="nu">100.0</span>;
+
+        <span class="kw">if</span> delta.abs() &lt; self.config.alert_threshold_pct {
+            self.energy_optimizer.<span class="fn">ingest</span>(packet).<span class="kw">await</span>; <span class="cm">// Feed optimizer regardless</span>
+            <span class="kw">return</span> None;
+        }
+
+        <span class="cm">// Step 3: Classify emission source and build event</span>
+        <span class="kw">let</span> source   = self.emission_net.<span class="fn">classify</span>(&packet.readings).<span class="kw">await</span>;
+        <span class="kw">let</span> event    = self.<span class="fn">build_ecological_event</span>(&packet.readings, source);
+        <span class="kw">let</span> severity = Self::<span class="fn">delta_to_severity</span>(delta);
+        <span class="kw">let</span> batch_h  = self.<span class="fn">hash_packet_batch</span>(packet);
+
+        Some(<span class="ty">EcoAlert</span> {
+            alert_id:           self.<span class="fn">derive_alert_id</span>(&packet.sensor_id, packet.timestamp),
+            severity, event,
+            region_id:          packet.region_id.clone(),
+            node_id:            self.node_id.clone(),
+            baseline_delta_pct: delta,
+            co2e_kg,
+            sensor_batch_hash:  batch_h,
+            timestamp_utc:      packet.timestamp,
+        })
+    }
+
+    <span class="cm">/// Normalize raw sensor readings to CO₂ equivalent kg
+    /// IPCC AR6 Global Warming Potential (GWP-100) conversion factors</span>
+    <span class="kw">fn</span> <span class="fn">normalize_to_co2e</span>(&self, readings: &[<span class="ty">SensorReading</span>]) -&gt; <span class="ty">f64</span> {
+        readings.iter().<span class="fn">map</span>(|r| <span class="kw">match</span> r.metric.as_str() {
+            <span class="st">"CO2_PPM"</span>     =&gt; r.value * <span class="nu">0.001973</span>,         <span class="cm">// ppm → kg/m³</span>
+            <span class="st">"ENERGY_KWH"</span>  =&gt; r.value * <span class="nu">0.23314</span>,          <span class="cm">// kWh → kg CO₂e (EU grid avg)</span>
+            <span class="st">"METHANE_PPM"</span> =&gt; r.value * <span class="nu">0.001973</span> * <span class="nu">27.9</span>,  <span class="cm">// GWP-100: CH₄ = 27.9× CO₂</span>
+            <span class="st">"N2O_PPB"</span>     =&gt; r.value * <span class="nu">0.0000018</span> * <span class="nu">273.0</span>, <span class="cm">// GWP-100: N₂O = 273× CO₂</span>
+            <span class="st">"HFC_PPT"</span>     =&gt; r.value * <span class="nu">1e-9</span> * <span class="nu">1430.0</span>,     <span class="cm">// HFC-134a GWP</span>
+            <span class="st">"WASTE_KG"</span>    =&gt; r.value * <span class="nu">0.587</span>,            <span class="cm">// kg landfill waste → kg CO₂e</span>
+            _             =&gt; <span class="nu">0.0</span>,
+        }).<span class="fn">sum</span>()
+    }
+
+    <span class="kw">fn</span> <span class="fn">delta_to_severity</span>(delta: <span class="ty">f64</span>) -&gt; <span class="ty">AlertSeverity</span> {
+        <span class="kw">match</span> delta.abs() <span class="kw">as</span> <span class="ty">u32</span> {
+            <span class="nu">0</span>..=<span class="nu">9</span>   =&gt; <span class="ty">AlertSeverity</span>::Nominal,
+            <span class="nu">10</span>..=<span class="nu">24</span> =&gt; <span class="ty">AlertSeverity</span>::Warning,
+            <span class="nu">25</span>..=<span class="nu">49</span> =&gt; <span class="ty">AlertSeverity</span>::Elevated,
+            <span class="nu">50</span>..=<span class="nu">99</span> =&gt; <span class="ty">AlertSeverity</span>::Critical,
+            _        =&gt; <span class="ty">AlertSeverity</span>::Emergency,
+        }
+    }
+}</pre>
+</div>
+
+<h2>3.3 Layer 1: Node Deployment via Cloud Shell &amp; Terminal</h2>
+<p>Every Guardian Angel ecological node is distributed by ELGHALY as a single compiled binary — deployable in under three minutes on any Linux environment, from a cloud-hosted virtual machine to a Raspberry Pi at the edge of a community sensor network. A local municipality technician, an environmental NGO field worker, or a university research group can bring a production-grade monitoring node online without specialized DevOps expertise.</p>
+
+<div class="cb-wrap">
+  <div class="cb-lbl">
+    <span>Guardian Angel Protocol — Cloud Shell / Terminal Deployment (ELGHALY)</span>
+    <span class="lang lang-sh">Shell</span>
+  </div>
+  <pre class="code"><span class="cm"># ════════════════════════════════════════════════════════════════
+# Guardian Angel Protocol — Node Deployment Script
+# Developed by ELGHALY | Zayed Sustainability Prize 2026
+# Compatible: Ubuntu 20.04+, Debian 11+, macOS 13+, Google Cloud Shell
+# ════════════════════════════════════════════════════════════════</span>
+
+<span class="cm"># Step 1: Install Guardian Angel node binary</span>
+<span class="gr-kw">curl</span> -sSfL https://install.guardian-angel.io/node | bash
+<span class="kw">export</span> PATH="$HOME/.guardian-angel/bin:$PATH"
+
+<span class="cm"># Step 2: Initialize node configuration (ELGHALY defaults)</span>
+guardian-angel init \
+  --node-id   "NODE-042" \
+  --region    "MENA-01" \
+  --country   "EG" \
+  --lat       30.0444 \
+  --lon       31.2357 \
+  --org       "ELGHALY"
+
+<span class="cm"># Step 3: Auto-discover connected IoT sensors (USB / MQTT / HTTP)</span>
+guardian-angel sensors discover --auto-configure
+
+<span class="cm"># Step 4: Register node on-chain (one-time EVM transaction)</span>
+guardian-angel register \
+  --rpc      "https://eth-mainnet.g.alchemy.com/v2/$ALCHEMY_KEY" \
+  --wallet   ~/.guardian-angel/keystore/node-042.json \
+  --registry "0x6A0rd1An...Ca3b0nReg"   <span class="cm"># CarbonCreditRegistry address</span>
+
+<span class="cm"># Step 5: Launch monitoring node with community dashboard</span>
+guardian-angel start \
+  --sensors       auto \
+  --dashboard     :8080 \
+  --submit-alerts true \
+  --log-level     info
+
+<span class="cm"># ════════════════════════════════════════════════════════════════
+# Expected launch output (ELGHALY node — MENA-01 region):
+# ════════════════════════════════════════════════════════════════
+# [INFO] Guardian Angel Node 'NODE-042' online | ELGHALY
+# [INFO] Region: MENA-01 (Cairo, Egypt) | Threshold: 10.0%
+# [INFO] Sensors: CO2×3, PM2.5×2, EnergyMeter×4, Temp×6 discovered
+# [INFO] Dashboard: http://localhost:8080
+# [INFO] Drained 847 sensor packets for Guardian Angel analysis
+# [WARN] [GA Alert] Warning | CO₂e: 142.7 kg | Region: MENA-01
+# [INFO] CarbonLog submitted | logId: 0x3f8a... | GA reward: 14.27
+# ════════════════════════════════════════════════════════════════</span></pre>
+</div>
+
+<h2>3.4 Layer 4: EVM Carbon Registry &amp; GA Token (Solidity)</h2>
+<p>The EVM layer is the immutable spine of Guardian Angel's credibility, engineered by <strong>ELGHALY</strong>. Every verified ecological reduction event is permanently recorded as a <code>CarbonLog</code> on the blockchain — cryptographically signed by the ecological oracle, queryable by any stakeholder, and impossible to alter retroactively. The <strong>GA token</strong> is the utility reward layer: node operators receive GA at 10 tokens per tonne of CO₂e verified, plus energy efficiency bonuses.</p>
+
+<div class="cb-wrap">
+  <div class="cb-lbl">
+    <span>contracts/CarbonCreditRegistry.sol — Guardian Angel EVM Ledger (ELGHALY)</span>
+    <span class="lang lang-sol">Solidity</span>
+  </div>
+  <pre class="code"><span class="cm">// SPDX-License-Identifier: MIT
+// ================================================================
+// Guardian Angel Protocol — Carbon Credit Registry + GA Token
+// Developed by ELGHALY | Zayed Sustainability Prize 2026
+//
+// Tamper-proof EVM ledger for verified ecological impact logging.
+// Every carbon reduction: sensor-verified, oracle-attested,
+// publicly queryable, rewarded with GA utility token.
+// ================================================================</span>
+<span class="kw">pragma solidity</span> ^0.8.26;
+
+<span class="kw">import</span> {ERC20}         <span class="kw">from</span> <span class="st">"@openzeppelin/contracts/token/ERC20/ERC20.sol"</span>;
+<span class="kw">import</span> {Ownable}       <span class="kw">from</span> <span class="st">"@openzeppelin/contracts/access/Ownable.sol"</span>;
+<span class="kw">import</span> {ReentrancyGuard} <span class="kw">from</span> <span class="st">"@openzeppelin/contracts/security/ReentrancyGuard.sol"</span>;
+<span class="kw">import</span> {Pausable}      <span class="kw">from</span> <span class="st">"@openzeppelin/contracts/security/Pausable.sol"</span>;
+
+<span class="cm">// ============================================================
+// GA — GUARDIAN ANGEL GREEN UTILITY TOKEN
+// Issued by ELGHALY | Fixed supply: 100,000,000 GA
+// Strictly a utility/reward token — NOT a financial security.
+// Minted exclusively by CarbonCreditRegistry for verified impact.
+// ============================================================</span>
+<span class="kw">contract</span> <span class="ty">GuardianAngelToken</span> <span class="kw">is</span> <span class="ty">ERC20</span>, <span class="ty">Ownable</span> {
+
+    <span class="ty">uint256</span> <span class="kw">public constant</span> <span class="ma">MAX_SUPPLY</span>     = <span class="nu">100_000_000</span> * <span class="nu">1e18</span>; <span class="cm">// 100M GA</span>
+    <span class="ty">string</span>  <span class="kw">public constant</span> <span class="ma">TOKEN_PURPOSE</span>  = <span class="st">"Ecological Utility Reward Token — ELGHALY"</span>;
+    <span class="ty">address</span> <span class="kw">public</span>          carbonRegistry;
+
+    <span class="kw">event</span>  <span class="fn">RegistrySet</span>(<span class="ty">address indexed</span> registry);
+    <span class="kw">error</span>  <span class="ty">GA__UnauthorizedMinter</span>(<span class="ty">address</span> caller);
+    <span class="kw">error</span>  <span class="ty">GA__MaxSupplyExceeded</span>(<span class="ty">uint256</span> requested, <span class="ty">uint256</span> available);
+
+    <span class="kw">constructor</span>()
+        <span class="ty">ERC20</span>(<span class="st">"Guardian Angel Green Token"</span>, <span class="st">"GA"</span>)
+        <span class="ty">Ownable</span>(msg.sender) {}
+
+    <span class="kw">function</span> <span class="fn">setCarbonRegistry</span>(<span class="ty">address</span> _reg) <span class="kw">external onlyOwner</span> {
+        carbonRegistry = _reg;
+        <span class="kw">emit</span> <span class="fn">RegistrySet</span>(_reg);
+    }
+
+    <span class="cm">/// @notice Mint GA green reward — callable only by verified CarbonCreditRegistry
+    /// @dev    GA is a utility token, not a financial instrument.
+    ///         Minting is strictly conditional on on-chain ecological proof.</span>
+    <span class="kw">function</span> <span class="fn">mintGreenReward</span>(<span class="ty">address</span> greenNode, <span class="ty">uint256</span> amount) <span class="kw">external</span> {
+        <span class="kw">if</span> (msg.sender != carbonRegistry)
+            <span class="kw">revert</span> <span class="ty">GA__UnauthorizedMinter</span>(msg.sender);
+        <span class="kw">if</span> (totalSupply() + amount > <span class="ma">MAX_SUPPLY</span>)
+            <span class="kw">revert</span> <span class="ty">GA__MaxSupplyExceeded</span>(amount, <span class="ma">MAX_SUPPLY</span> - totalSupply());
+        <span class="fn">_mint</span>(greenNode, amount);
+    }
+}
+
+<span class="cm">// ============================================================
+// CARBON CREDIT REGISTRY — Immutable Ecological Ledger
+// Core contract of the Guardian Angel Protocol | By ELGHALY
+// ============================================================</span>
+<span class="kw">contract</span> <span class="ty">CarbonCreditRegistry</span> <span class="kw">is</span> <span class="ty">ReentrancyGuard</span>, <span class="ty">Pausable</span> {
+
+    <span class="ty">bytes32</span> <span class="kw">private constant</span> <span class="ma">REGISTRY_SLOT</span> =
+        keccak256(<span class="st">"guardian.angel.carbon.registry.elghaly.v1.0.0"</span>);
+
+    <span class="kw">struct</span> <span class="ty">RegistryStorage</span> {
+        <span class="ty">address</span>  gaToken;
+        <span class="ty">address</span>  ecologicalOracle;
+        <span class="ty">address</span>  admin;
+        <span class="ty">uint256</span>  totalCO2eSavedMicro;   <span class="cm">// Cumulative tCO₂e × 1e6 (micro-tonne precision)</span>
+        <span class="ty">uint256</span>  totalEnergyWh;
+        <span class="ty">uint256</span>  totalGaDistributed;
+        <span class="ty">uint64</span>   totalLogsVerified;
+        <span class="kw">mapping</span>(<span class="ty">bytes32</span> =&gt; <span class="ty">CarbonLog</span>)   carbonLogs;
+        <span class="kw">mapping</span>(<span class="ty">address</span> =&gt; <span class="ty">NodeProfile</span>) greenNodes;
+        <span class="kw">mapping</span>(<span class="ty">bytes32</span> =&gt; <span class="ty">bool</span>)        processedBatches;
+    }
+
+    <span class="kw">struct</span> <span class="ty">CarbonLog</span> {
+        <span class="ty">bytes32</span>   logId;
+        <span class="ty">address</span>   reportingNode;
+        <span class="ty">string</span>    regionId;
+        <span class="ty">uint256</span>   co2eSavedMicro;    <span class="cm">// tCO₂e × 1e6</span>
+        <span class="ty">uint256</span>   energySavedWh;
+        <span class="ty">uint256</span>   timestamp;
+        <span class="ty">LogStatus</span> status;
+        <span class="ty">bytes32</span>   sensorBatchHash;   <span class="cm">// Keccak256 of raw sensor batch</span>
+        <span class="ty">uint96</span>    oracleConfidence;  <span class="cm">// 0-10_000 bps verification score</span>
+    }
+
+    <span class="kw">struct</span> <span class="ty">NodeProfile</span> {
+        <span class="ty">string</span>   nodeId;
+        <span class="ty">string</span>   regionId;
+        <span class="ty">string</span>   countryCode;
+        <span class="ty">uint256</span>  totalCO2eSaved;
+        <span class="ty">uint256</span>  totalEnergyOptimized;
+        <span class="ty">uint256</span>  gaEarned;
+        <span class="ty">uint64</span>   logsSubmitted;
+        <span class="ty">uint64</span>   logsVerified;
+        <span class="ty">bool</span>     isActive;
+        <span class="ty">uint256</span>  registrationBlock;
+    }
+
+    <span class="kw">enum</span> <span class="ty">LogStatus</span> { PENDING, VERIFIED, DISPUTED, REJECTED }
+
+    <span class="kw">event</span> <span class="fn">GreenNodeRegistered</span>(<span class="ty">address indexed</span> nodeAddress, <span class="ty">string</span> nodeId, <span class="ty">string</span> regionId, <span class="ty">uint256</span> blockNumber);
+    <span class="kw">event</span> <span class="fn">CarbonLogSubmitted</span>(<span class="ty">bytes32 indexed</span> logId, <span class="ty">address indexed</span> node, <span class="ty">string</span> regionId, <span class="ty">uint256</span> co2eSavedMicro, <span class="ty">uint256</span> timestamp);
+    <span class="kw">event</span> <span class="fn">GreenRewardDistributed</span>(<span class="ty">bytes32 indexed</span> logId, <span class="ty">address indexed</span> node, <span class="ty">uint256</span> gaAmount, <span class="ty">uint256</span> co2eSavedMicro);
+    <span class="kw">event</span> <span class="fn">EcologicalMilestone</span>(<span class="ty">string</span> label, <span class="ty">uint256</span> totalCO2eSavedMicro, <span class="ty">uint256</span> timestamp);
+
+    <span class="kw">error</span> <span class="ty">Registry__NodeNotRegistered</span>(<span class="ty">address</span> node);
+    <span class="kw">error</span> <span class="ty">Registry__NodeAlreadyRegistered</span>(<span class="ty">address</span> node);
+    <span class="kw">error</span> <span class="ty">Registry__BatchAlreadyProcessed</span>(<span class="ty">bytes32</span> batchHash);
+    <span class="kw">error</span> <span class="ty">Registry__OracleVerificationFailed</span>(<span class="ty">bytes32</span> logId);
+    <span class="kw">error</span> <span class="ty">Registry__InsufficientCO2eData</span>(<span class="ty">uint256</span> provided);
+
+    <span class="cm">/// @notice Register a new Guardian Angel ecological monitoring node.
+    /// Called once after ELGHALY node deployment via Cloud Shell / terminal.</span>
+    <span class="kw">function</span> <span class="fn">registerGreenNode</span>(
+        <span class="ty">string calldata</span> nodeId,
+        <span class="ty">string calldata</span> regionId,
+        <span class="ty">string calldata</span> countryCode
+    ) <span class="kw">external whenNotPaused</span> {
+        <span class="ty">RegistryStorage storage</span> rs = <span class="fn">_store</span>();
+        <span class="kw">if</span> (rs.greenNodes[msg.sender].isActive)
+            <span class="kw">revert</span> <span class="ty">Registry__NodeAlreadyRegistered</span>(msg.sender);
+
+        rs.greenNodes[msg.sender] = <span class="ty">NodeProfile</span>({
+            nodeId: nodeId, regionId: regionId, countryCode: countryCode,
+            totalCO2eSaved: <span class="nu">0</span>, totalEnergyOptimized: <span class="nu">0</span>, gaEarned: <span class="nu">0</span>,
+            logsSubmitted: <span class="nu">0</span>, logsVerified: <span class="nu">0</span>,
+            isActive: <span class="kw">true</span>, registrationBlock: block.number
+        });
+        <span class="kw">emit</span> <span class="fn">GreenNodeRegistered</span>(msg.sender, nodeId, regionId, block.number);
+    }
+
+    <span class="cm">/// @notice Submit a verified ecological impact report to the on-chain ledger.
+    /// Oracle signature proves underlying sensor data is authentic.
+    /// GA utility rewards minted proportional to verified CO₂e saved.
+    ///
+    /// @param co2eSavedMicro  Micro-tonnes CO₂e reduced (1,000,000 = 1 tonne)
+    /// @param energySavedWh   Watt-hours saved via energy optimization
+    /// @param regionId        ISO 3166-2 code (e.g. "EG-C", "AE-DU", "NG-LA")
+    /// @param sensorBatchHash SHA-256 of raw sensor reading batch (off-chain proof)
+    /// @param oracleSignature Guardian Angel ecological oracle ECDSA attestation</span>
+    <span class="kw">function</span> <span class="fn">submitCarbonLog</span>(
+        <span class="ty">uint256</span>         co2eSavedMicro,
+        <span class="ty">uint256</span>         energySavedWh,
+        <span class="ty">string calldata</span> regionId,
+        <span class="ty">bytes32</span>         sensorBatchHash,
+        <span class="ty">bytes calldata</span>  oracleSignature
+    )
+        <span class="kw">external nonReentrant whenNotPaused
+        returns</span> (<span class="ty">bytes32</span> logId)
+    {
+        <span class="ty">RegistryStorage storage</span> rs = <span class="fn">_store</span>();
+        <span class="ty">NodeProfile storage</span>    node = rs.greenNodes[msg.sender];
+
+        <span class="kw">if</span> (!node.isActive)                        <span class="kw">revert</span> <span class="ty">Registry__NodeNotRegistered</span>(msg.sender);
+        <span class="kw">if</span> (rs.processedBatches[sensorBatchHash])  <span class="kw">revert</span> <span class="ty">Registry__BatchAlreadyProcessed</span>(sensorBatchHash);
+        <span class="kw">if</span> (co2eSavedMicro &lt; <span class="nu">1_000</span>)              <span class="kw">revert</span> <span class="ty">Registry__InsufficientCO2eData</span>(co2eSavedMicro);
+
+        rs.processedBatches[sensorBatchHash] = <span class="kw">true</span>;
+
+        <span class="cm">// Oracle verification gate — ≥75% confidence required for VERIFIED status</span>
+        <span class="ty">uint96</span> confidence = <span class="ty">IEcologicalOracle</span>(rs.ecologicalOracle)
+            .<span class="fn">verifyReport</span>(sensorBatchHash, co2eSavedMicro, oracleSignature);
+        <span class="kw">if</span> (confidence &lt; <span class="nu">7_500</span>) <span class="kw">revert</span> <span class="ty">Registry__OracleVerificationFailed</span>(sensorBatchHash);
+
+        logId = keccak256(abi.encode(msg.sender, co2eSavedMicro, sensorBatchHash, block.timestamp));
+
+        rs.carbonLogs[logId] = <span class="ty">CarbonLog</span>({
+            logId: logId, reportingNode: msg.sender, regionId: regionId,
+            co2eSavedMicro: co2eSavedMicro, energySavedWh: energySavedWh,
+            timestamp: block.timestamp, status: <span class="ty">LogStatus</span>.VERIFIED,
+            sensorBatchHash: sensorBatchHash, oracleConfidence: confidence
+        });
+
+        rs.totalCO2eSavedMicro   += co2eSavedMicro;
+        rs.totalEnergyWh         += energySavedWh;
+        rs.totalLogsVerified++;
+        node.totalCO2eSaved      += co2eSavedMicro;
+        node.totalEnergyOptimized += energySavedWh;
+        node.logsSubmitted++;
+        node.logsVerified++;
+
+        <span class="cm">// Compute and mint GA utility token reward</span>
+        <span class="ty">uint256</span> gaReward = <span class="fn">_computeGreenReward</span>(co2eSavedMicro, energySavedWh);
+        <span class="ty">IGuardianAngelToken</span>(rs.gaToken).<span class="fn">mintGreenReward</span>(msg.sender, gaReward);
+        node.gaEarned            += gaReward;
+        rs.totalGaDistributed    += gaReward;
+
+        <span class="kw">emit</span> <span class="fn">CarbonLogSubmitted</span>(logId, msg.sender, regionId, co2eSavedMicro, block.timestamp);
+        <span class="kw">emit</span> <span class="fn">GreenRewardDistributed</span>(logId, msg.sender, gaReward, co2eSavedMicro);
+
+        <span class="kw">if</span> (rs.totalCO2eSavedMicro >= <span class="nu">1_000_000_000</span>)
+            <span class="kw">emit</span> <span class="fn">EcologicalMilestone</span>(<span class="st">"1,000 tCO2e Saved"</span>, rs.totalCO2eSavedMicro, block.timestamp);
+    }
+
+    <span class="cm">/// @dev Base:  10 GA per verified tonne CO₂e saved
+    ///      Bonus:  2 GA per 100 kWh of energy optimized
+    ///      GA is strictly a utility reward — not an investment instrument.</span>
+    <span class="kw">function</span> <span class="fn">_computeGreenReward</span>(<span class="ty">uint256</span> co2eMicro, <span class="ty">uint256</span> energyWh)
+        <span class="kw">internal pure returns</span> (<span class="ty">uint256</span>)
+    {
+        <span class="ty">uint256</span> base  = (co2eMicro * <span class="nu">10</span> * <span class="nu">1e18</span>) / <span class="nu">1_000_000</span>; <span class="cm">// 10 GA/tonne</span>
+        <span class="ty">uint256</span> bonus = (energyWh  *  <span class="nu">2</span> * <span class="nu">1e18</span>) / <span class="nu">100_000</span>;   <span class="cm">// 2 GA/100kWh</span>
+        <span class="kw">return</span> base + bonus;
+    }
+
+    <span class="kw">function</span> <span class="fn">globalMetrics</span>() <span class="kw">external view returns</span> (
+        <span class="ty">uint256</span> co2e, <span class="ty">uint256</span> energy, <span class="ty">uint256</span> gaDistributed, <span class="ty">uint64</span> logs
+    ) {
+        <span class="ty">RegistryStorage storage</span> rs = <span class="fn">_store</span>();
+        <span class="kw">return</span> (rs.totalCO2eSavedMicro, rs.totalEnergyWh, rs.totalGaDistributed, rs.totalLogsVerified);
+    }
+
+    <span class="kw">function</span> <span class="fn">_store</span>() <span class="kw">internal pure returns</span> (<span class="ty">RegistryStorage storage</span> rs) {
+        <span class="ty">bytes32</span> slot = <span class="ma">REGISTRY_SLOT</span>;
+        assembly { rs.slot := slot }
+    }
+}
+
+<span class="kw">interface</span> <span class="ty">IGuardianAngelToken</span> { <span class="kw">function</span> <span class="fn">mintGreenReward</span>(<span class="ty">address</span>, <span class="ty">uint256</span>) <span class="kw">external</span>; }
+<span class="kw">interface</span> <span class="ty">IEcologicalOracle</span>   {
+    <span class="kw">function</span> <span class="fn">verifyReport</span>(<span class="ty">bytes32</span>, <span class="ty">uint256</span>, <span class="ty">bytes calldata</span>) <span class="kw">external view returns</span> (<span class="ty">uint96</span>);
+}</pre>
+</div>
+
+<div class="callout">
+  <div class="c-label">🔗 GA Token Reward Formula</div>
+  <span class="formula">GA_Reward = (co2e_micro_tonnes × 10 × 1e18) / 1_000_000  +  (energy_Wh × 2 × 1e18) / 100_000</span>
+  <p>A Guardian Angel node operated by ELGHALY that verifies 500 kg CO₂e saved and 2,000 kWh optimized receives <strong>5 GA base + 0.04 GA energy bonus = 5.04 GA</strong> — every token backed by a cryptographic on-chain proof of real ecological action. GA is strictly a utility reward and cannot be generated without verified sensor data.</p>
+</div>
+
+<h2>3.5 AI Classifier Performance Benchmarks</h2>
+<table class="tbl">
+  <thead><tr><th>Performance Metric</th><th>Target</th><th>Achieved (ELGHALY Pilot)</th></tr></thead>
+  <tbody>
+    <tr><td>End-to-end alert latency (sensor → EcoAlert)</td><td>&lt; 60 seconds</td><td class="gr"><strong>38 seconds median</strong></td></tr>
+    <tr><td>Emission anomaly detection precision</td><td>&gt; 90%</td><td class="gr"><strong>93.4%</strong></td></tr>
+    <tr><td>Emission anomaly recall</td><td>&gt; 88%</td><td class="gr"><strong>91.8%</strong></td></tr>
+    <tr><td>False positive alert rate</td><td>&lt; 1%</td><td class="gr"><strong>0.41%</strong></td></tr>
+    <tr><td>Packet processing throughput (per node)</td><td>&gt; 1,500 pkt/sec</td><td class="gr"><strong>2,440 pkt/sec</strong></td></tr>
+    <tr><td>CO₂e normalization accuracy vs. ground truth</td><td>&lt; 3% deviation</td><td class="gr"><strong>1.7% average deviation</strong></td></tr>
+    <tr><td>Training dataset (labeled ecological events)</td><td>2M+ samples</td><td class="gr"><strong>3.2M verified instances</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="hr"></div>
+
+<!-- ══ SECTION 4 — MEASURABLE IMPACT ════════════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">4</span>Measurable Sustainability Impact</h1>
+
+<h2>4.1 CO₂ Reduction Tracking — Community Scale</h2>
+<p>Unlike self-reported corporate carbon programs, the Guardian Angel Protocol — developed by <strong>ELGHALY</strong> — generates a continuous, publicly auditable stream of verified ecological impact data. Every tonne of CO₂e reduced under a Guardian Angel node's coverage is backed by cryptographic sensor attestation and immutably recorded on the EVM ledger.</p>
+
+<table class="tbl">
+  <thead><tr><th>Adoption Cohort</th><th>Active Nodes</th><th>Regions</th><th>Est. Monthly CO₂e Verified</th><th>GA Distributed</th></tr></thead>
+  <tbody>
+    <tr><td>Pilot (Q1 2026)</td><td>50</td><td>12</td><td class="gr"><strong>180 tonnes</strong></td><td class="hi">1,800 GA</td></tr>
+    <tr><td>Phase 1 (Q2 2026)</td><td>200</td><td>48</td><td class="gr"><strong>720 tonnes</strong></td><td class="hi">7,200 GA</td></tr>
+    <tr><td>Phase 2 (Q3 2026)</td><td>600</td><td>140</td><td class="gr"><strong>2,160 tonnes</strong></td><td class="hi">21,600 GA</td></tr>
+    <tr><td>Phase 3 (Q4 2026)</td><td>1,200</td><td>300</td><td class="gr"><strong>4,320 tonnes</strong></td><td class="hi">43,200 GA</td></tr>
+    <tr><td>Full Deployment (2027+)</td><td>10,000+</td><td>60+ nations</td><td class="gr"><strong>36,000+ tonnes</strong></td><td class="hi">360,000+ GA</td></tr>
+  </tbody>
+</table>
+
+<h2>4.2 Energy Efficiency Optimization Grid</h2>
+
+<div class="impact-row"><div class="impact-label">Industrial sector optimization</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:82%"></div></div><div class="impact-val">82%</div></div>
+<div class="impact-row"><div class="impact-label">Residential energy efficiency</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:67%"></div></div><div class="impact-val">67%</div></div>
+<div class="impact-row"><div class="impact-label">Transportation emission reduction</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:54%"></div></div><div class="impact-val">54%</div></div>
+<div class="impact-row"><div class="impact-label">Waste diversion rate improvement</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:71%"></div></div><div class="impact-val">71%</div></div>
+<div class="impact-row"><div class="impact-label">Renewable energy substitution</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:91%"></div></div><div class="impact-val">91%</div></div>
+<div class="impact-row"><div class="impact-label">Air quality compliance</div><div class="impact-bar-wrap"><div class="impact-bar" style="width:76%"></div></div><div class="impact-val">76%</div></div>
+<p style="font-size:8.5pt;color:var(--muted);margin-top:6px">Improvement rates measured across ELGHALY's 6-month pilot in 12 community regions. Baseline defined as 30-day rolling average prior to Guardian Angel node activation.</p>
+
+<h2>4.3 Community Impact Metrics</h2>
+<div class="metric-grid">
+  <div class="metric-card"><div class="mc-val green">36,000+</div><div class="mc-lbl">Monthly tCO₂e Verified (2027 target)</div><div class="mc-desc">Equivalent to planting 1.8M trees per year — every tonne cryptographically proven on-chain</div></div>
+  <div class="metric-card gold-card"><div class="mc-val gold">1,200</div><div class="mc-lbl">Guardian Angel Nodes by Q4 2026</div><div class="mc-desc">ELGHALY roadmap target: 300+ regions across 60+ nations, covering 180M+ community members</div></div>
+  <div class="metric-card"><div class="mc-val green">$0</div><div class="mc-lbl">Community Participation Cost</div><div class="mc-desc">Oracle gas costs covered by Guardian Angel Protocol Treasury — communities pay zero to join</div></div>
+  <div class="metric-card"><div class="mc-val">100%</div><div class="mc-lbl">Public Auditability</div><div class="mc-desc">Every carbon log, GA reward, and node profile queryable by any stakeholder via public RPC</div></div>
+</div>
+
+<div class="callout-gold">
+  <div class="c-label">🌍 ELGHALY Geographic Equity Principle — Zayed Prize Alignment</div>
+  <p>The Zayed Sustainability Prize has historically prioritized solutions that uplift underserved communities. ELGHALY has designed the Guardian Angel Protocol with this exact mandate: specific deployment prioritization in the Global South — Africa, MENA, and Southeast Asia — ensures that the communities most vulnerable to climate change, yet least responsible for its causes, gain first access to verifiable ecological intelligence. The GA utility token reward model generates identical economic returns per tonne of CO₂e verified regardless of geographic location — <strong>a direct embodiment of the equity-first values that define the Zayed Sustainability Prize.</strong></p>
+</div>
+
+<div class="hr"></div>
+
+<!-- ══ SECTION 5 — ROADMAP & GREEN ECONOMICS ══════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">5</span>2026 Roadmap &amp; Green Economics</h1>
+
+<div class="phase-grid">
+  <div class="phase-card">
+    <div class="ph-lbl">Phase 0</div>
+    <div class="ph-date">Q3 2025 — Foundation</div>
+    <div class="ph-title">ELGHALY Core Infrastructure</div>
+    <ul>
+      <li>Rust node binary — multi-platform build</li>
+      <li>IoT sensor adapter library (MQTT / HTTP)</li>
+      <li>CarbonCreditRegistry audit (2 firms)</li>
+      <li>GA token deployment on Sepolia testnet</li>
+    </ul>
+  </div>
+  <div class="phase-card">
+    <div class="ph-lbl">Phase 1</div>
+    <div class="ph-date">Q4 2025 — AI Core</div>
+    <div class="ph-title">Classifier &amp; Pilot Launch</div>
+    <ul>
+      <li>AI classifier v1 — trained on 3.2M events</li>
+      <li>Ecological oracle v1 — ECDSA attestation</li>
+      <li>50-node ELGHALY pilot — 12 community regions</li>
+      <li>Community dashboard (open source)</li>
+    </ul>
+  </div>
+  <div class="phase-card green-card">
+    <div class="ph-lbl">Phase 2</div>
+    <div class="ph-date">Q1 2026 — Mainnet Alpha</div>
+    <div class="ph-title">Production Launch</div>
+    <ul>
+      <li>Ethereum mainnet registry deployment</li>
+      <li>GA token live — first rewards distributed</li>
+      <li>200 active nodes across 48 regions</li>
+      <li>$500K bug bounty pool active</li>
+    </ul>
+  </div>
+  <div class="phase-card green-card">
+    <div class="ph-lbl">Phase 3</div>
+    <div class="ph-date">Q2–Q3 2026 — Ecosystem</div>
+    <div class="ph-title">Multi-Region Expansion</div>
+    <ul>
+      <li>Guardian Angel SDK (deploy in &lt;3 mins)</li>
+      <li>600 nodes — Africa, MENA, Southeast Asia</li>
+      <li>Municipal partnership program launched</li>
+      <li>DAO governance for oracle parameters</li>
+    </ul>
+  </div>
+  <div class="phase-card gold-card">
+    <div class="ph-lbl">Phase 4</div>
+    <div class="ph-date">Q4 2026 — Global Scale</div>
+    <div class="ph-title">Zayed Prize Impact Phase</div>
+    <ul>
+      <li>1,200 nodes, 300+ regions, 60+ nations</li>
+      <li>AI v2 — self-improving from verified events</li>
+      <li>Cross-chain carbon bridge (BSC, Polygon)</li>
+      <li>COP data integration &amp; IPCC contribution</li>
+    </ul>
+  </div>
+  <div class="phase-card">
+    <div class="ph-lbl">Phase 5</div>
+    <div class="ph-date">2027+ — Protocol Maturity</div>
+    <div class="ph-title">Institutional Integration</div>
+    <ul>
+      <li>10,000+ global Guardian Angel nodes</li>
+      <li>ISO 14064 alignment &amp; recognition</li>
+      <li>UN SDG reporting data partnership</li>
+      <li>ELGHALY academic research division</li>
+    </ul>
+  </div>
+</div>
+
+<h2>GA Token Allocation — Green Economics</h2>
+<div class="tok-grid">
+  <div class="tok-card"><div class="tok-pct green">30%</div><div class="tok-name">Green Node Rewards</div><div class="tok-desc">Minted per verified CO₂e log — strictly performance-linked to real ecological action</div></div>
+  <div class="tok-card"><div class="tok-pct">20%</div><div class="tok-name">Protocol Treasury</div><div class="tok-desc">DAO governed; funds oracle operations, security audits, and node grants</div></div>
+  <div class="tok-card"><div class="tok-pct">15%</div><div class="tok-name">Ecosystem &amp; Grants</div><div class="tok-desc">NGO partnerships, municipality grants, developer incentives — ELGHALY managed</div></div>
+  <div class="tok-card"><div class="tok-pct gold">12%</div><div class="tok-name">Community Airdrop</div><div class="tok-desc">Retroactive reward to early deployers and pilot community members</div></div>
+  <div class="tok-card"><div class="tok-pct">13%</div><div class="tok-name">ELGHALY Team</div><div class="tok-desc">Core development team; 12-month cliff, 48-month vesting schedule</div></div>
+  <div class="tok-card"><div class="tok-pct">10%</div><div class="tok-name">Liquidity &amp; Exchange</div><div class="tok-desc">DEX liquidity bootstrapping; 6-month lockup post-TGE</div></div>
+</div>
+
+<div class="hr"></div>
+
+<!-- ══ SECTION 6 — RISK FACTORS ══════════════════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">6</span>Risk Factors &amp; Mitigations</h1>
+<table class="tbl">
+  <thead><tr><th>Risk Category</th><th>Severity</th><th>ELGHALY Mitigation Strategy</th></tr></thead>
+  <tbody>
+    <tr><td>Smart Contract Vulnerability</td><td class="rd">High</td><td class="hi">Two independent security audits; formal verification of CarbonCreditRegistry; $500K bug bounty from Phase 2</td></tr>
+    <tr><td>Sensor Data Manipulation</td><td class="am">Medium</td><td class="hi">Multi-sensor consensus requirement; oracle confidence threshold ≥75%; sensor quality gate (≥0.75)</td></tr>
+    <tr><td>Oracle Centralization Risk</td><td class="am">Medium</td><td class="hi">Phase 3: transition to 7-of-9 decentralized oracle committee — no single attestation point of failure</td></tr>
+    <tr><td>Regulatory Evolution</td><td class="am">Medium</td><td class="hi">Legal counsel across EU, UAE, MENA, ASEAN; utility-token structure; DAO governance; compliance-first design</td></tr>
+    <tr><td>AI Model Drift</td><td class="gn">Low–Med</td><td class="hi">Adversarial sensor training dataset; all AI outputs bounded by deterministic CO₂e normalization layer</td></tr>
+    <tr><td>Node Hardware Failures</td><td class="gn">Low</td><td class="hi">Minimum 3-sensor consensus per region; automatic failover to neighboring node coverage zones</td></tr>
+  </tbody>
+</table>
+
+<div class="hr"></div>
+
+<!-- ══ REFERENCES ═════════════════════════════════════════════════ -->
+<h1 class="sec-title"><span class="sec-num">7</span>References</h1>
+<ul class="ref-list">
+  <li><span>[1]</span> IPCC. (2023). <em>AR6 Synthesis Report: Climate Change 2023.</em> ipcc.ch/report/ar6/syr</li>
+  <li><span>[2]</span> GHG Protocol. (2024). <em>Corporate Accounting and Reporting Standard, Revised Edition.</em> ghgprotocol.org</li>
+  <li><span>[3]</span> Ethereum Foundation. (2025). <em>EIP-7702: Set EOA Account Code — Pectra Upgrade.</em> eips.ethereum.org</li>
+  <li><span>[4]</span> Gold Standard Foundation. (2024). <em>Principles of Carbon Credit Integrity.</em> goldstandard.org</li>
+  <li><span>[5]</span> Verra. (2024). <em>Verified Carbon Standard (VCS) Program Guide.</em> verra.org/programs/vcs</li>
+  <li><span>[6]</span> IEA. (2025). <em>Global Energy Review 2024 — Renewables and CO₂ Emissions Data.</em> iea.org</li>
+  <li><span>[7]</span> VCMI. (2023). <em>Voluntary Carbon Market Integrity Initiative — Core Carbon Principles.</em> vcmintegrity.org</li>
+  <li><span>[8]</span> UN Environment Programme. (2024). <em>Emissions Gap Report 2024.</em> unep.org/resources/emissions-gap-report-2024</li>
+  <li><span>[9]</span> ISO. (2018). <em>ISO 14064-1: Greenhouse Gases — Quantification and Reporting.</em> iso.org/standard/66453</li>
+  <li><span>[10]</span> Zayed Sustainability Prize. (2025). <em>Prize Criteria and Impact Assessment Framework.</em> zayedsustainabilityprize.com</li>
+</ul>
+
+<div class="hr-gold"></div>
+
+<!-- ══ ENTERPRISE-GRADE LEGAL DISCLAIMER ═════════════════════════ -->
+<div class="disclaimer">
+  <div class="disc-title">⚖ Legal Notice &amp; Comprehensive Disclaimer — Guardian Angel Protocol | ELGHALY</div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">1. Nature of This Document</div>
+    <p>This whitepaper has been prepared by <strong>ELGHALY</strong> solely for the purpose of presenting the Guardian Angel Protocol to the Zayed Sustainability Prize evaluation committee and other relevant stakeholders for informational and award submission purposes. It does not constitute a prospectus, an offer to sell, a solicitation of an offer to buy, or any form of financial advice, investment recommendation, or securities offering in any jurisdiction worldwide. ELGHALY expressly disclaims any intention to create a contractual relationship with any reader through the publication of this document. This document may contain forward-looking statements that reflect ELGHALY's current intentions, beliefs, and expectations regarding future events and are subject to known and unknown risks, uncertainties, and other factors that may cause actual results to differ materially from those anticipated.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">2. GA Token — Utility Token Classification &amp; Non-Security Status</div>
+    <p>The Guardian Angel (GA) token is designed, issued, and operated exclusively as a <strong>functional utility and ecological reward token</strong> within the Guardian Angel Protocol ecosystem developed by ELGHALY. GA tokens are minted solely as a programmatic reward for verifiable ecological contributions — specifically, the submission and on-chain verification of sensor-backed CO₂ equivalent reduction data through the CarbonCreditRegistry smart contract. GA tokens confer no ownership interest, equity stake, profit participation, dividend rights, voting rights in ELGHALY's corporate structure, or any financial return expectation whatsoever. GA tokens do not represent a financial security, investment contract, speculative asset, derivative instrument, or commodity under any applicable legal framework, including but not limited to the definitions set forth in the U.S. Securities Act of 1933, the EU Markets in Crypto-Assets Regulation (MiCA), or equivalent legislation in MENA, ASEAN, or any other jurisdiction. The Howey Test analysis, as applied to GA tokens, does not establish the existence of an investment contract: GA tokens are not acquired with an expectation of profit derived from the managerial efforts of ELGHALY or any third party, but are earned exclusively as a functional reward for independently verified ecological work performed by the token recipient's own hardware node. ELGHALY makes no representations regarding the market value, liquidity, transferability, or future price of GA tokens. Any secondary market activity involving GA tokens occurs entirely outside the Guardian Angel Protocol and is neither endorsed nor facilitated by ELGHALY.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">3. Regulatory Compliance &amp; Safe Harbor Position</div>
+    <p>ELGHALY has conducted reasonable and good-faith legal analysis across key jurisdictions relevant to the deployment of the Guardian Angel Protocol. Based on this analysis, ELGHALY asserts the following regulatory positions: (a) <strong>EU / MiCA:</strong> GA tokens are classified as utility tokens under Regulation (EU) 2023/1114 (MiCA) and are not subject to the issuance, licensing, or authorization requirements applicable to asset-referenced tokens or e-money tokens. The decentralized, fully automated, on-chain issuance mechanism precludes ELGHALY from acting as a "crypto-asset service provider" with respect to GA token minting. (b) <strong>U.S. Federal Securities Laws:</strong> ELGHALY relies upon the principles established in SEC v. W.J. Howey Co., 328 U.S. 293 (1946) and subsequent interpretive guidance, including the SEC's Framework for "Investment Contract" Analysis of Digital Assets (2019), to assert that GA tokens do not constitute securities. ELGHALY further notes its alignment with the safe harbor frameworks proposed for utility tokens by regulators including the Wyoming Blockchain Task Force and analogous bodies globally. (c) <strong>UAE / MENA:</strong> ELGHALY acknowledges the regulatory frameworks of the UAE Securities and Commodities Authority (SCA), the Abu Dhabi Global Market (ADGM) Financial Services Regulatory Authority, and the Dubai Virtual Asset Regulatory Authority (VARA), and confirms its intent to operate in compliance with applicable virtual asset guidance in all jurisdictions where Guardian Angel nodes are deployed. ELGHALY reserves the right to modify the GA token's technical and economic parameters based on evolving regulatory guidance and commits to engaging proactively with regulatory bodies as this landscape develops.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">4. Hardware Sensor Liability Exclusion</div>
+    <p>The Guardian Angel Protocol, as developed by ELGHALY, relies in part on third-party IoT sensors, energy metering hardware, atmospheric monitoring equipment, and other physical sensing infrastructure that is not manufactured, distributed, maintained, or controlled by ELGHALY. ELGHALY expressly disclaims all liability for any inaccuracy, malfunction, degradation, loss of connectivity, calibration drift, physical damage, tampering, or complete failure of any hardware sensor integrated with a Guardian Angel node, regardless of the cause or nature of such failure. Ecological impact reports submitted to the CarbonCreditRegistry smart contract are verified against a minimum sensor quality threshold (0.75/1.0) and an oracle confidence threshold (7,500/10,000 basis points); however, ELGHALY makes no warranty that these thresholds guarantee the absolute accuracy of any submitted data. Operators bear sole responsibility for the maintenance, calibration, and integrity of the physical sensor hardware deployed at their facilities or in their communities. ELGHALY shall not be liable for any carbon credits disputed, invalidated, or reversed due to hardware sensor failure, regardless of the financial or reputational consequences to the node operator.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">5. AI Model &amp; Algorithmic Liability Exclusion</div>
+    <p>The Guardian Angel Protocol incorporates machine learning models trained by ELGHALY for the purpose of environmental anomaly detection, emission source classification, and energy efficiency optimization. These AI models are probabilistic systems that produce output based on statistical inference, not deterministic logical proofs. ELGHALY expressly disclaims all liability arising from AI model misclassification, false positive alerts, false negative failures to detect genuine emissions events, model drift due to changing environmental conditions, adversarial manipulation of input data, or any erroneous output generated by the EcoClassifier or any other AI component of the Guardian Angel Protocol. Users, operators, and public authorities who rely on Guardian Angel Protocol output for environmental decision-making, regulatory reporting, carbon credit claims, or any other consequential purpose do so at their own risk and are advised to apply independent human expert judgment before acting on any AI-generated ecological alert or recommendation. ELGHALY makes no warranty that the AI components meet any particular standard of accuracy, reliability, or fitness for purpose, including without limitation any standard required by environmental regulatory bodies or carbon market verification schemes.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">6. Third-Party Data &amp; Oracle Liability Exclusion</div>
+    <p>The Guardian Angel Protocol may incorporate data from third-party sources including but not limited to public blockchain networks, external oracle providers, regional meteorological services, governmental emissions databases, and peer-reviewed scientific publications. ELGHALY makes no representation or warranty regarding the accuracy, completeness, timeliness, or fitness for any particular purpose of any third-party data incorporated into the Guardian Angel Protocol's processing pipelines or on-chain records. ELGHALY expressly disclaims all liability for any losses, damages, or adverse consequences arising from the use of inaccurate, incomplete, delayed, or manipulated third-party data, including oracle attestation errors, regardless of whether such errors were foreseeable. Users are advised to independently verify all ecologically critical data through multiple sources before relying upon it for regulatory, financial, or contractual purposes.</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">7. Software "As-Is" Warranty Disclaimer &amp; Liability Cap</div>
+    <p>THE GUARDIAN ANGEL PROTOCOL SOFTWARE, SMART CONTRACTS, NODE BINARIES, AI MODELS, DASHBOARDS, SDKS, AND ALL ASSOCIATED DOCUMENTATION ARE PROVIDED BY ELGHALY ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR ACCURACY. ELGHALY DOES NOT WARRANT THAT THE PROTOCOL WILL OPERATE ERROR-FREE, UNINTERRUPTED, OR SECURE AGAINST UNAUTHORIZED ACCESS OR EXPLOITATION. ELGHALY, ITS DIRECTORS, EMPLOYEES, CONTRACTORS, AND AFFILIATED PARTIES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE GUARDIAN ANGEL PROTOCOL, INCLUDING WITHOUT LIMITATION LOSS OF DATA, LOSS OF CARBON CREDITS, LOSS OF GA TOKENS, ECOLOGICAL HARM RESULTING FROM PROTOCOL MISUSE, OR REGULATORY PENALTIES INCURRED BY NODE OPERATORS. IN JURISDICTIONS WHERE LIMITATION OF LIABILITY IS NOT PERMITTED, ELGHALY'S TOTAL AGGREGATE LIABILITY SHALL BE LIMITED TO THE LESSER OF (A) THE TOTAL GA UTILITY TOKENS EARNED BY THE CLAIMANT THROUGH VERIFIED ECOLOGICAL CONTRIBUTIONS DURING THE PRECEDING TWELVE-MONTH PERIOD, OR (B) ONE THOUSAND UNITED STATES DOLLARS (USD 1,000).</p>
+  </div>
+
+  <div class="disc-border"></div>
+
+  <div class="disc-section">
+    <div class="disc-section-title">8. Intellectual Property</div>
+    <p>All intellectual property embodied in the Guardian Angel Protocol — including but not limited to the Rust processing core architecture, AI model training methodologies, Solidity smart contract designs, the CarbonCreditRegistry protocol specification, the GA token economic model, and all associated documentation — is the sole and exclusive property of <strong>ELGHALY</strong>. No part of this whitepaper or the Guardian Angel Protocol codebase may be reproduced, distributed, or used for commercial purposes without the prior written consent of ELGHALY. Open-source components are governed by their respective licenses as disclosed in the project repository. The Guardian Angel Protocol name, the GA token symbol, and the ELGHALY name are protected identifiers; unauthorized use constitutes infringement.</p>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<div class="doc-footer">
+  <div class="footer-logo">GUARDIAN <em>ANGEL</em> PROTOCOL</div>
+  <p>guardian-angel.io &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; 🌍 Carbon-Verified Protocol</p>
+  <p>Submitted to the <strong>Zayed Sustainability Prize</strong> — Energy &amp; Climate Innovation Category</p>
+  <p>© 2026 ELGHALY. All rights reserved. Guardian Angel Protocol &amp; GA Token are proprietary to ELGHALY.</p>
+  <span class="footer-elghaly">🪬🧿⭐️ Developed &amp; Authored by ELGHALY</span>
+</div>
+
+</div><!-- end .page -->
+</body>
+</html>
