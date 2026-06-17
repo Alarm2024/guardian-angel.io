@@ -6,7 +6,8 @@ import {RashidAward} from "../Contracts/guardian-angel.io.sol";
 
 contract RashidAwardTest is Test {   
     RashidAward public awardContract;
- // Standardized cryptographic test actor
+ 
+// Standardized cryptographic test actor
     address public owner = address(0xA);
     address public guardian = address(0xB);
     address public verifier = address(0xC);
