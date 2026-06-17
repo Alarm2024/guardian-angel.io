@@ -2,11 +2,9 @@
 pragma solidity 0.8.20;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {RashidAward} from "../src/guardian-angel.io.sol";
+import {RashidAward} from "../Contracts/guardian-angel.io.sol";
 
 contract RashidAwardTest is Test {
-    RashidAward public awardContract;
-
     // Standardized cryptographic test actors
     address public owner = address(0xA);
     address public guardian = address(0xB);
