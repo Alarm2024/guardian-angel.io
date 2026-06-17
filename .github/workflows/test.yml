@@ -8,25 +8,17 @@ on:
 
 jobs:
   test-suite:
-    name: Execution of Automated Smart Contract Audit & Tests
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Source Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Install Foundry Toolchain Infrastructure
+      - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
 
       - name: Install Dependencies
         run: forge install
 
-      - name: Verify Contract Smart Compilation
-        run: forge build --sizes
-
-      - name: Run Institutional Test Vectors
-        run: forge test -vvv --gas-report
+      - name: Run tests
+        run: forge test -vvv
