@@ -2,3 +2,8 @@
 src = 'Contracts'
 out = 'out'
 libs = ['lib']
+test = 'test'
+remappings = [
+    'forge-std/=lib/forge-std/src/'
+]
+
